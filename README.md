@@ -61,7 +61,7 @@ Not a guess: [`tools/compat`](tools/compat) opens each program, types a real sen
 | Firefox: text box on a page | ✅ | ✅ | ✅ |
 | Firefox: address bar | ✅ | ✅ | ✅ |
 
-Tested on Windows 11 23H2 with AutoHotkey 1.1.37.02, Chrome 155, Firefox 158 and Microsoft 365 Apps 16.0. Runs that were interrupted by other windows taking focus were repeated.
+Tested on Windows 11 23H2 with AutoHotkey 1.1.37.02, Chrome 155, Firefox 158 and Microsoft 365 Apps 16.0. Runs that were interrupted by other windows taking focus were repeated. The Hindi sentences were sent to the programs as Unicode keystrokes by the test script (the test PC has no Hindi keyboard installed), not typed on a physical Hindi keyboard.
 ¹ Word, Excel and PowerPoint ship their own AutoCorrect list that overlaps the English fixes, so an English pass there would not prove which tool did the work.
 
 **Not tested:** Notepad, Outlook, desktop chat apps, code editors, games. They are ordinary Windows text boxes, so they should work, but we have not checked each one. Run `tools\compat\run_compat.ps1` to test yours.
