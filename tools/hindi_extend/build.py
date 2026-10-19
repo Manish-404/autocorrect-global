@@ -56,8 +56,22 @@ for i, l in enumerate(open(S + "ne.dic", encoding="utf-8", errors="replace")):
     if i:
         ne.add(nfc(l.strip().split("/")[0]))
 
+# Marathi words (see marathi.py): the Hindi list must not touch them
+MR = ROOT + ".tmp/mr/"
+mr = set()
+try:
+    for i, l in enumerate(open(MR + "mr_IN.dic", encoding="utf-8", errors="replace")):
+        if i:
+            mr.add(nfc(l.strip().split("/")[0]))
+    mr |= {w for w, n in json.load(open(MR + "mrwiki_counts.json", encoding="utf-8")).items() if n >= 3}
+    for f in ("mrwiki-latest-all-titles-in-ns0", "mrwiktionary-latest-all-titles-in-ns0"):
+        for l in open(MR + f, encoding="utf-8"):
+            mr |= set(DEV.findall(nfc(l)))
+except FileNotFoundError:
+    print("warning: Marathi word lists not found in .tmp/mr - Marathi words will not be excluded")
+
 # a wrong form must be absent from all of these
-seen_anywhere = set(wc) | dic | set(sub) | titles | ne
+seen_anywhere = set(wc) | dic | set(sub) | titles | ne | mr
 # looser bar for "real word": used only to protect real words from the word-boundary hazard
 real = {w for w, n in wc.items() if n >= 2} | dic | ne | {w for w in sub if sub[w] >= 2} | titles
 
@@ -222,7 +236,7 @@ rest = [kv for kv in items if kv[1][1] not in PRECISE]
 items = precise + rest[: max(0, CAP - len(precise))]
 
 TITLES = {
-    "nukta": "More ड़ / ढ़ written without the nukta (Marathi writes these without it - delete this block if you type Marathi)",
+    "nukta": "More ड़ / ढ़ written without the nukta",
     "bya": "More ब्य written for व्य",
     "gya": "ग्य written for ज्ञ",
     "vowel": "Short / long vowel mixed up: ि ी ु ू (more words)",

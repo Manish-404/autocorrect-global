@@ -94,7 +94,7 @@ Tested on Windows 11 23H2 with AutoHotkey 1.1.37.02, Chrome 155, Firefox 158 and
 | File | Language | Fixes | Add your own |
 | --- | --- | --- | --- |
 | [`AutoCorrect.ahk`](AutoCorrect.ahk) | English | about 4,700 | `Win + H` |
-| [`AutoCorrectHindi.ahk`](AutoCorrectHindi.ahk) | Hindi, Devanagari | about 320 | `Win + Shift + H` |
+| [`AutoCorrectHindi.ahk`](AutoCorrectHindi.ahk) | Hindi, Devanagari | 3,367 | `Win + Shift + H` |
 | [`AutoCorrectHinglish.ahk`](AutoCorrectHinglish.ahk) | Hinglish | 34,377 on, 3,762 optional | `Win + Alt + H` |
 
 Select a word, press the hotkey, type the right spelling: the line is added to the bottom of that script and the script reloads. To remove a fix you don't like, delete its line.

@@ -35,7 +35,7 @@ for L, (s, ws) in sorted(agg.items(), key=lambda kv: -kv[1][0]):
     print(f"{s:6d} {L}->{ents[L]}  n={len(ws)}  e.g. " + ", ".join(w for w, _ in sorted(ws, key=lambda x: -x[1])[:4]))
 
 if "--apply" in sys.argv_orig:
-    KEEP = {"नही", "चिन्ह"}   # nही: only Marathi words are harmed; चिन्ह: the "harmed" compound still gets a valid spelling
+    KEEP = {"नही", "चिन्ह"}   # nही: only non-Hindi words are harmed; चिन्ह: the "harmed" compound still gets a valid spelling
     drop = {L for L, (s, ws) in agg.items() if (s >= 20 or len(ws) >= 5 or max(c for _, c in ws) >= 8) and L not in KEEP}
     out_lines = []; removed = []
     gen = False
