@@ -19,8 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-Exception: AutoCorrect.ahk is the long-standing AutoHotkey AutoCorrect script
-(Jim Biancolo, 2006), built on Wikipedia's lists of common misspellings
-(CC BY-SA 3.0) and the other sources named in its header. It is included as it
-was and keeps its own terms; this licence does not apply to it.

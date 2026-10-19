@@ -172,7 +172,7 @@ Found a wrong fix, or a word that should be there? [Open an issue](https://githu
 ## Credits and licence
 
 * The Hindi and Hinglish scripts, the generator, the tests and the website are [MIT licensed](LICENSE).
-* [`AutoCorrect.ahk`](AutoCorrect.ahk) is the long-standing AutoHotkey AutoCorrect script (Jim Biancolo, 2006), built on Wikipedia's [lists of common misspellings](https://en.wikipedia.org/wiki/Wikipedia:Lists_of_common_misspellings) (CC BY-SA 3.0) and the other sources named in its header. It is included as it was and keeps its own terms.
+* [`AutoCorrect.ahk`](AutoCorrect.ahk) is the long-standing AutoHotkey AutoCorrect script (Jim Biancolo, 2006), built on Wikipedia's [lists of common misspellings](https://en.wikipedia.org/wiki/Wikipedia:Lists_of_common_misspellings) (CC BY-SA 3.0) and the other sources named in its header. It is included as it was and keeps its own terms (see [NOTICE.md](NOTICE.md)).
 * [AutoHotkey](https://www.autohotkey.com/) is a separate free project. Microsoft, Word, Excel, PowerPoint, Chrome and Firefox are trademarks of their owners and are named only to say where this was tested.
 * The promo video was made with [brag](https://github.com/latent-spaces/brag).
 
