@@ -1,0 +1,24 @@
+# Regular verb stems. A leading * marks stems whose forms also get typo coverage; the rest only
+# protect valid words from being "corrected". stem/elided gives the stem used before vowel endings
+# (samajh/samjh -> samjha).
+
+# --- consonant-final stems (class C) ---
+*bol sun dekh likh padh chal ruk baith uth mil rakh chhod bhej maang maan jaan seekh bhool soch khel
+*daud bhaag naach lad jeet haar pahunch nikal/nikl khol tod jod badal/badl badh bach bhar khareed bech
+*pakad/pakd dhoondh samajh/samjh pooch lag gir ban bigad/bigd sudhar/sudhr hans dar ghum mod laut
+*phenk phat toot jal bujh khil pehen/pehn chadh utar chun gin kaat dhak rok sambhal/sambhl dikh pak kood
+*ghus chaah tair
+
+# --- less common: only protect valid words ---
+thak jhuk chhup chipak ubal pigal sookh lapet phail sikud ghis tapak chamak damak chikh chilla chhil
+kuchal chhink thook nigal chakh chaba pees bhoon ukhaad bikhar/bikhr simat/simt bhatak/bhatk
+atak/atk latak/latk lipat/lipt jhapat/jhapt jakad/jakd khul ghul dhul bhid ghat uchal khod kas
+chhan ubhar/ubhr dhans lut tarash rang jhaank taank bhij ladkhad/ladkhd daag gunj kaanp sisak hil
+dol uljh sulajh jhaad pukaar
+
+# --- stems ending in a (class A) ---
+*bata dikha sikha samjha laga mila hata chala uda gira kama paka jala bujha khila pila sula jaga
+*utha bana bhaga dara muskura ghabra sharma ghuma bula suna jhuka chhupa chhina naha rula hansa pahuncha
+
+# --- stems ending in o (class O) ---
+*ro so dho kho

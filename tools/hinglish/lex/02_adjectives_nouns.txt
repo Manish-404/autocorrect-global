@@ -1,0 +1,355 @@
+# Adjectives, people, family, body, food, home, nature, money, school, travel, feelings.
+
+@ Adjectives and qualities
+accha | acha achha achcha achchha aacha aachha achaa
+acchi | achi achhi achchi achhee acchee
+acche | !ache achhe achchhe achhey acchey
+bura | buraa
+buri | burii
+bure | burey
+bada | badaa
+badi | badii
+bade | badey
+chhota | chota chhotaa chotaa
+chhoti | choti chhotii chotii
+chhote | chote chhotey chotey
+naya | nayaa
+nayi | nayii
+naye | nayey
+purana | puraana puranaa
+purani | puraani puranii
+purane | puraane puraney
+sundar | sunder sundr sundaar
+khoobsurat | khubsurat khoobsoorat khubsoorat khoobsurt
+badhiya | badiya badhia badia bdhiya badhiyaa
+zabardast | jabardast zabardust jabardust
+shandaar | shandar shaandar shaandaar
+mazedaar | mazedar majedaar majedar
+bekaar | bekar bekaaar
+bakwaas | bakwas bakvas bakwass
+faltu | phaltu faltuu
+pagal | paagal pagall
+bewakoof | bevakoof bewakuf bevkoof bewkoof
+badmaash | badmash badmaas
+mehnati | mehanati mehnatee
+imaandaar | imandar imaandar imandaar
+sachcha | saccha sacha sachha
+sachchi | sacchi sachi sachhi
+jhootha | jhutha jhoota jhuta
+jhoothi | jhuthi jhoothee
+theek | thik theak thek theeek
+sahi | sahee sahii
+galat | ghalat galatt
+mushkil | muskil mushkill mushqil
+aasaan | asaan aasan
+zaroori | jaruri zaruri jaroori zaroorii
+tez | tezz
+dheema | dhima dheemaa
+mota | motaa
+patla | patlaa
+lamba | lambaa
+lambi | lambii
+lambe | lambey
+ooncha | uncha
+oonchi | unchi
+oonche | unche
+neecha | nicha
+saaf | saf
+ganda | gandaa
+gandi | gandee
+saaf
+khaali | khali khaalee
+bhara | bharaa
+poora | pura pooraa puraa
+poori | pooree
+poore | poorey
+adhoora | adhura adhooraa
+akela | akelaa
+akeli | akelee
+sasta | sastaa
+mehenga | mehanga mahanga mahenga
+garam | garm garamm
+thanda | thandaa thanda
+meetha | mitha meethaa
+meethi | mithi meethee
+namkeen | namkin namkeen
+teekha | tikha teekhaa
+khatta | khata khattaa
+kadwa | kadva kadwaa karwa
+taaza | taza tajaa taja
+sookha | sukha sookhaa
+geela | gila geelaa
+nazdeek | nazdik najdik nazdeek
+asli | aslee
+nakli | nakalee naklee
+khaas | khas khaass
+aam | aam
+mashhoor | mashoor mashhur
+mahatvapurn | mahatvapoorn
+asaan
+
+@ Feelings and abstract nouns
+khush | khus khushh
+udaas | udas udaaas
+dukhi | dukhee dukhii
+khushi | khushee khushii
+gussa | gusa gussaa
+pyaar | pyar pyaaar pyaarr
+mohabbat | mohabat muhabbat mohabbath muhabat
+ishq | ishk ishqq
+dil | dill
+dosti | dostee dostii
+dushmani | dushmanee
+dukh | dukhh
+sukh | sukhh
+umeed | ummeed umid umeedd
+himmat | himat himmatt
+taakat | takat taqat
+chinta | chintaa
+pareshaan | pareshan pareshaann
+pareshani | pareshaani pareshanee
+darr | dar
+mazaak | mazak majak mazaaq
+maza | mazaa majaa maja
+zindagi | zindgi jindagi jindgi zindagee
+duniya | dunia duniyaa
+kismat | kismet qismat kismatt
+sapna | sapnaa
+khwab | khwaab khvab
+kahani | kahaani kahanee
+sach | sachh
+jhooth | jhuth jhoot jhut
+sawaal | sawal savaal
+jawaab | jawab javab jawaabb
+waada | vaada wada vada
+kasam | kasm kasamm
+bharosa | bharosaa bharose
+vishwaas | vishwas vishvas
+dhokha | dhoka dhokhaa
+galti | galtee galtii
+maafi | mafi maafee
+shukriya | shukria shukriyaa sukriya shukriyah
+dhanyawaad | dhanyawad dhanyavad
+swagat | svagat swaagat
+badhaai | badhai badhayi badhaee
+mubarak | mubarakh mubaarak
+shubh | subh
+mausam | mosam mausm
+mood | moodd
+zimmedari | zimmedaari jimmedari jimedari zimedari
+azaadi | aazadi azadi azaadee
+kaamyaabi | kamyabi kaamyabi kamyaabi
+koshish | koshis koshishh
+tareef | taareef tarif
+sharam | sharm
+izzat | izat izzatt
+shauk | shouk shauq
+aadat | adat aadatt
+tareeqa | tariqa tarika tareeka
+tarika | tareeqa
+ilaaj | ilaj illaj
+bimaari | bimari bimaaree
+sehat | sehet sihat sehatt
+tabiyat | tabiat tabyat tabeeyat tabiyaat
+thakaan | thakan thakaaan
+neend | nind neendd
+bhookh | bhukh bhuk bhookhh
+pyaas | pyas pyaass
+dard | dardd
+chot | chott
+zakhm | jakhm zakhm
+ghabrahat | ghabrahat ghabrahat
+aaram | araam aaraam
+chain | chaiin
+sukoon | sukun sukoonn
+rahat | rahaat
+mushkilein | mushkile mushkilen
+parwah | parvah parwaah
+fikar | fikr fikarr
+khayal | khyal khayaal khyaal
+dhyaan | dhyan dhyaann
+sharaarat | shararat shararath
+
+@ People
+aadmi | admi aadmee aadmii
+aurat | orat auraat
+ladka | larka ladkaa larkaa
+ladki | larki ladkii larkii
+ladke | larke ladkey larkey
+insaan | insan insaaan
+padosi | padosee padosii
+rishtedaar | rishtedar rishtedaarr
+dost | dostt
+yaar | !yar yaaar
+bhai | bhaii bhae bhayi
+bhaiya | bhaiyaa bhaiyya bhayya
+didi | didii
+behen | behan bahan bahen
+maa | maaa
+papa | pappa papaa
+mummy | mumy mummi mumi
+beta | betaa
+beti | betii
+bachcha | bachha baccha bachhaa bachchaa
+bachche | bacche bachhe bachchey
+bachchi | bachhi bacchi
+=bacha
+pati | patee
+patni | patnee
+biwi | biwee biwii
+shauhar | shohar shauher
+saas | sass
+sasur | sasurr
+bhabhi | bhabi bhabhee bhabhii
+chacha | chachaa chaacha
+chachi | chaachi chachii
+mama | mamaa
+mami | mamii
+nana | nanaa
+nani | nanii
+dada | dadaa
+dadi | daadi dadii
+bua | buaa
+maasi | mausi mausee maasee
+parivaar | parivar pariwar pariwaar
+log | logg
+=logon
+sab
+=sab
+insaaf | insaf insaaff
+malik | maalik malikk
+naukar | naukarr
+doctor
+=sir =sar =madam
+saheb | sahab sahib saahab
+kisaan | kisan kisaann
+mazdoor | mazdur majdoor majdur
+dukaandaar | dukandar dukaandar dukandaar
+pandit | pandith panditt
+neta | netaa
+sarkar | sarkaar
+police
+
+@ Body and health
+aankh | ankh aankhh aakh
+aankhein | ankhein aankhe ankhen aankhen
+naak | nak naakk
+kaan | kan kaann
+munh | muh moonh mooh munhh
+daant | dant daantt
+haath | hath haathh
+pair | per pairr
+ungli | ungali unglee
+peeth | pith peethh
+kamar | kamr kamarr
+dimaag | dimag dimaagh
+chehra | chehara chehrra
+baal | bal baall
+khoon | khun khoonn
+haddi | haddee haddii
+sir
+bukhaar | bukhar bukhaarr
+khaansi | khansi khaasi khasi
+zukaam | jukam zukam jukaam
+dawai | dawa dawayi davai dawaai
+dawaai
+ilaaj
+
+@ Food and drink
+khaana | khana khaanaa
+paani | pani paanee
+chai | chaay chay chaai
+doodh | dudh doodhh
+roti | rotee rotii
+chawal | chaawal chawaal chaval
+daal | dal daall
+sabzi | sabji sabzee sabjee
+aloo | alu alooo
+pyaaz | pyaz pyaj
+tamatar | tamater tamaatar
+mirch | mirchi mirchh
+namak | namk namakk
+cheeni | chini cheenee
+makhan | makkhan makhaan
+paneer | panir paneeer
+dahi | dahee dahii
+nashta | nasta nashtaa
+mithai | mitai mithayi mithaee
+anda | andaa
+phal | fal
+nimbu | nimbuu
+lassi | lasi
+chawal
+
+@ Home, places and things
+ghar | gharr
+kamra | kamraa
+darwaaza | darwaza darvaza darwaja darvaja
+khidki | khidkee khidaki
+deewaar | diwar diwaar deewar
+kursi | kursee
+bistar | bistr bistarr
+chaadar | chadar chadr
+rasoi | rasoee
+angan | aangan
+seedhi | sidhi seedhee
+taala | tala taalaa
+chaabi | chabi chaabee
+kitaab | kitab kitaaab
+kalam | kalm
+kaagaz | kagaz kagaj kaagaj
+paisa | paisaa
+paise | paisey
+rupaya | rupya rupaiya
+rupaye | rupaiye rupye
+kharcha | kharch kharchaa
+kamaai | kamai kamaee
+naukri | naukree nokri
+mehnat | mehanat mehnath
+dukaan | dukan dukaaan
+bazaar | bazar bazaarr
+daam | daamm
+keemat | kimat qeemat kimat
+tankhwah | tankhwa tankha tankhawah
+chhutti | chutti chhuti chuti
+padhaai | padhai padhayi padai
+pariksha | pareeksha parikshaa
+vidyarthi | vidhyarthi vidyaarthi
+sadak | sadk sadakk
+raasta | rasta raastaa
+gaadi | gadi gaadee
+safar | safr
+shehar | sheher shahar shaher
+gaon | gaaon gaav gaon
+desh | deshh
+duniya
+mohalla | mohala mohallaa
+sheher
+
+@ Nature and weather
+aasmaan | asmaan aasman asman
+zameen | jameen zamin jamin zameenn
+pahaad | pahad pahaadd
+nadi | nadee
+samundar | samandar samundr
+ped | pedd
+phool | !phul phoolll
+hawa | hava hawaa
+baarish | barish barsih
+dhoop | dhup dhoopp
+badal | badl
+sardi | sardee
+garmi | garmee
+thand | thandd
+sooraj | suraj sooraaj
+chaand | chand chaaand
+taare | tare
+andhera | andhera andheraa
+ujaala | ujala ujaalaa
+roshni | roshnee raushni
+aag | aagg
+dhuaan | dhuan dhuaaan
+mitti | mittee
+pathar | patthar patharr
+jungle
+mausam

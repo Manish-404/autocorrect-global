@@ -1,0 +1,232 @@
+# Core function words: pronouns, particles, question words, connectors, adverbs.
+# Canonical spelling = the most common chat spelling.
+
+@ Pronouns and possessives
+=main =mein =mai =hum =tum =tu =aap =ye =yeh =woh =wo =yah =vah =mujh =tujh
+=apna =apni =apne =apnaa
+=tera =teri =tere
+mujhe | muje mujhey mujhay mjhe mujhee mujhai
+mujhse | mujse mujhsey mujsey mjhse mujhsay
+mujhko | mujko mujhku mjhko
+mujhmein | mujhme mujmein mujhmen mujhmai
+mera | meraa
+meri | merii meree
+mere | merey meray
+tujhe | tuje tujhey tujhay tujhai
+tujhse | tujse tujhsey
+tujhko | tujko
+hume | hamein hame humein hamen humen hamien
+humko | hamko humku hmko
+humse | hamse humsey hmse
+humne | hamne humney
+hamara | humara hmara hamaara humaara hamra humra
+hamari | humari hmari hamaari humaari hamri humri
+hamare | humare hmare hamaare humaare hamre humre
+tumhe | tumhen tumhein tumhey tmhe tumhay tumeh
+tumko | tumku tmko
+tumse | tumsey tmse
+tumne | tumney tmne
+tumhara | tumara tumhaara tumaara tmhara tumahara tumhra tumra
+tumhari | tumari tumhaari tumaari tmhari tumhri tumri
+tumhare | tumare tumhaare tumaare tmhare tumhre tumre
+aapka | apka aapkaa apkaa aapaka
+aapki | apki aapkii apkii aapaki
+aapke | apke aapkey apkey aapake
+aapko | apko aapku apku aapako
+aapse | !apse aapsey apsey
+aapne | aapney
+aapas | apas aapaas
+yeh | yehh
+woh | voh wohh
+wo | vo
+yahi | yehi
+wahi | vahi wahee
+uska | uskaa
+uski | uskii
+uske | uskey uskay
+usko | usku
+usne | usney usnay
+usse | ussey
+isne | isney
+iska | iskaa
+iski | iskii
+iske | iskey
+isko | isku
+isse | issey
+inhe | inhen inhein inhey
+unhe | unhen unhein unhey
+inhone | inhonay
+unhone | unhonay
+inka | inkaa
+inki | inkii
+inke | inkey
+inko | inku
+unka | unkaa
+unki | unkii
+unke | unkay
+unko | unku
+isme | ismai ismay
+usme | usmai usmay
+inme | inmai
+unme | unmai
+kisi | kisee kisii
+kisko | kisku
+kisne | kisney
+kiska | kiskaa
+kiski | kiskii
+kiske | kiskey
+kisse | kissey
+koi | koee koii koyi
+kuch | kuchh kuchch
+sabhi | sabi sabhee sabhii sbhi
+sabko | sabku
+sabse | sabsey
+sabka | sabkaa
+sabki | sabkii
+sabke | sabkey
+saath | sath saathh
+saathi | sathi saathee sathee
+saare | sare saarey sarey
+=saara =sara =saari =sari
+dono | donon donno donoo
+doosra | dusra doosraa dusraa doosara dusara
+doosri | dusri doosrii dusrii
+doosre | dusre doosrey dusrey
+
+@ Postpositions and helpers
+=ka =ki =ke =ko =se =par =pe =tak =liye =baare =bare =bina =baad =pehle =ek =do
+wala | vala waala vaala walaa
+wali | !vali waali vaali
+wale | vale waale vaale waley
+liye | liyeh liyee
+-liye | liyeh
+bhi | bhee bhii
+toh | tohh
+-hi |
+=hi =na =mat =bas =aur =ya =to =tho
+
+@ Be-verb forms
+-hai | hia hae haii
+-hain | hein hian
+-hoon | !hu hoo hoonn
+-ho |
+hoga | hogaa
+hogi | hogii
+honge | hongey
+hongi | hongii
+hota | hotaa
+hoti | hotii
+hote | hotey
+hua | huaa huwa huva
+hui | huii huwi huvi
+hue | huey huwe huve
+tha | thaa
+thi | thii
+raha | rahaa
+rahi | rahii
+rahe | rahey
+rahega | rahegaa
+rahegi | rahegii
+rahenge | rahengey
+rahta | rahtaa
+rahti | rahtii
+rahte | rahtey
+=the =thay
+
+@ Negation and question words
+nahi | nahin nhi nhin nahee nahii nahen
+kya | kyaa
+kyun | !kyu kyon kyoon kiun kyuun kyunn
+kyunki | kyuki kyonki kyoki kyunke kyonke kyuke kiunki kynki
+kaun | kon kaaun !kaon
+kaunsa | konsa kaunsaa kounsa
+kaunsi | konsi kounsi kaunsii
+kaunse | konse kounse kaunsey
+kaise | kese kaisey kaisae kaisay
+kaisa | kesa kaysa kaisaa
+kaisi | kesi kaysi kaisii
+=kab =kaha =kahi
+kahan | kahaan kahn
+kitna | kitnaa ktna kitana
+kitni | kitnii ktni kitani
+kitne | kitney ktne kitane
+kidhar | kidhr kidher
+idhar | idhr idher
+udhar | udhr udher
+yahan | yaha yahaan yhan yahn
+wahan | waha vahan vaha wahaan whan wahn
+jahan | jaha jahaan jhan jahn
+=yahin =wahin =jahin
+wahin | vahin
+
+@ Connectors
+lekin | lekn laken lakin lekhin leken lakhin lekinn
+magar | magr mgar magarr
+agar | agr agarr
+warna | varna warnaa
+parantu | parantoo parntu
+isliye | islie isiliye isilie isliyeh iseliye
+jabki | jabke jabkii
+halanki | halaanki halaki halanke halankee haalanki halankii
+phir | !fir phirr
+tabhi | tbhi tabhee
+jabhi | jbhi jabhee
+jaise | jese jaisey jaisae
+waise | vaise wese waisey vese
+aise | !ese aisey aese
+jaisa | jesa jaysa
+waisa | vaisa wesa
+aisa | esa aesa aysa aisaa
+waisi | vaisi wesi
+aisi | esi aesi aysi
+jaisi | jesi
+yaani | yani yaanee
+matlab | matlb matlabb
+=ab =tab =jab
+
+@ Time adverbs
+abhi | abi abhee abhii
+kabhi | kabi kabhee kabhii kbhi kabhie
+hamesha | hamesa humesha hmesha hamesaa hameshaa humesa
+aksar | akasar akser
+aaj | aj aajj
+=kal =din
+parso | parsoo parsso
+subah | subeh subahh subaah
+dopahar | dopehar dophar dupahar dopahr dupehar
+shaam | shaaam shaamm
+raat
+hafta | haftaa hafata
+hafte | haftey
+mahina | maheena mahena mahinaa
+mahine | maheene mahene mahiney
+=saal
+waqt | vaqt wakt vakt waqat waqtt
+pehle | pahle pehley pahley pehlay
+pehla | pahla pehlaa pahlaa
+pehli | pahli pehlii pahlii
+pichle | pichhle pichley pichlay
+agle | aglay
+agla | aglaa
+agli | aglii
+jaldi | jldi jaldee jaladi jaaldi
+dheere | dhire dheerey dhirey
+turant | turat turnat
+fauran | foran fouran
+=jald
+achanak | achaanak achnak achanaak
+
+@ Place and direction
+andar | andr andarr
+bahar | !bahr baahar bahaar
+upar | uppar upr uper ooper oopar
+neeche | neche neechey nichey nichhe
+peeche | piche pichhe peechhe pichey pechhe
+aage | aagey agey agee
+=paas =pas
+door | !dur doorr
+saamne | samne saamney samney saamnay
+beech | bich beeech
+kareeb | kareb karib kareebb
+=ghar =gher
+darmiyan | darmiyaan darmyan

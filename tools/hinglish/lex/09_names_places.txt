@@ -1,0 +1,50 @@
+# Names, places and proper nouns. Valid words only: they are never changed and never produced by a correction.
+
+@ Places
+=india =bharat =hindustan =delhi =mumbai =bombay =pune =kolkata =calcutta =chennai =madras =bengaluru
+=bangalore =hyderabad =jaipur =lucknow =patna =noida =gurgaon =gurugram =agra =kanpur =bhopal =indore
+=nagpur =surat =ahmedabad =vadodara =rajkot =jodhpur =udaipur =ajmer =kota =chandigarh =ludhiana
+=amritsar =jalandhar =shimla =manali =dehradun =haridwar =rishikesh =varanasi =banaras =allahabad
+=prayagraj =gorakhpur =meerut =ghaziabad =faridabad =rohtak =panipat =ambala =ranchi =jamshedpur
+=dhanbad =raipur =bilaspur =bhubaneswar =cuttack =puri =guwahati =shillong =imphal =kochi =cochin
+=kerala =tamil =nadu =karnataka =andhra =telangana =goa =gujarat =rajasthan =punjab =haryana =bihar
+=jharkhand =odisha =bengal =assam =sikkim =kashmir =srinagar =jammu =ladakh =leh =himachal
+=uttarakhand =uttar =pradesh =madhya =maharashtra =nepal =pakistan =lahore =karachi =dhaka =bangladesh
+=srilanka =colombo =kabul =tibet =china =japan =america =london =dubai =paris =canada =sindh =hind
+=yamuna =ganga =ganges =narmada =godavari =kaveri =krishna =brahmaputra =himalaya =vindhya =thar
+
+@ Religion and mythology
+=ram =sita =laxman =lakshman =hanuman =ravan =krishna =radha =shiv =shiva =parvati =ganesh =ganpati
+=durga =kali =lakshmi =saraswati =vishnu =brahma =indra =arjun =bhima =karna =draupadi =yudhishthir
+=sikh =muslim =hindu =jain =buddh =isai =christian =quran =gita =ramayan =mahabharat =veda =upanishad
+=allah =khuda =nanak =kabir =tulsi =meera =buddha =mahavir =gandhi =nehru =ambedkar =patel =bose
+
+@ Boys names
+=aman =amit =ankit =ankur =anil =anuj =arjun =arun =ashish =ashok =deepak =dinesh =gaurav =harsh
+=himanshu =kapil =karan =kunal =manish =mohit =naveen =nikhil =nitin =pankaj =prakash =rahul =raj
+=rajesh =rakesh =ravi =rohan =rohit =sachin =sandeep =sanjay =shivam =sumit =sunil =suresh =tarun
+=varun =vikas =vikram =vinay =vishal =yash =abhishek =aditya =akash =akhil =alok =anand =anirudh
+=ajay =ajit =amar =amol =aryan =ayush =bharat =chetan =chirag =devendra =dhruv =dilip =ganesh
+=girish =gopal =govind =hari =harish =hemant =imran =irfan =jatin =jay =jitendra =kamal =kishore
+=kumar =lalit =mahesh =manoj =mayank =mukesh =mohan =naresh =neeraj =om =pawan =piyush =pradeep
+=pramod =pranav =prashant =pratik =raghav =rajat =rajeev =rajiv =ramesh =ranjit =rishabh =ritesh
+=sagar =sahil =salman =sameer =samir =sanjeev =santosh =satish =saurabh =shahid =shailesh =shankar
+=sharad =shashi =shekhar =shubham =siddharth =sudhir =sunny =surya =sushil =tushar =uday =umesh
+=vaibhav =vijay =vimal =vinod =vipin =virat =vivek =yogesh =zaid =zubair
+
+@ Girls names
+=anjali =anita =deepika =divya =kavita =komal =meena =mohini =neelam =neha =nisha =pallavi =preeti
+=priya =priyanka =radha =rekha =ritu =sakshi =sapna =seema =shweta =simran =sneha =sonia =sunita
+=swati =vandana =aarti =aarohi =aditi =aishwarya =alka =ananya =anushka =archana =asha =bhavna
+=chhaya =deepa =disha =gayatri =geeta =geetika =heena =isha =jaya =jyoti =kajal =kamini =kiran
+=kriti =lata =laxmi =madhu =mamta =manisha =manju =meera =megha =mona =mukta =namita =nandini
+=neelima =nidhi =nikita =nirmala =payal =pooja =poonam =pratibha =pushpa =rachna =radhika =rani
+=rashmi =rina =riya =roshni =ruchi =sangeeta =sarita =savita =shalini =sharmila =shilpa =shivani
+=shobha =shraddha =shreya =shruti =smita =sonal =sudha =suman =sushma =swara =tanvi =tara =trisha
+=usha =vaishali =vani =varsha =veena =vidya =vinita =yamini =zoya
+
+@ Surnames and others
+=sharma =verma =gupta =singh =kumar =yadav =mishra =pandey =tiwari =dubey =shukla =agarwal =jain
+=patel =shah =mehta =joshi =kapoor =khan =ansari =qureshi =malik =chauhan =rajput =thakur =bhatt
+=nair =iyer =reddy =rao =naidu =menon =pillai =das =ghosh =banerjee =mukherjee =chatterjee =bose
+=sen =roy =dutta =saxena =srivastava =chaudhary =chaudhari =tomar =bisht =negi =rawat

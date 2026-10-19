@@ -1,0 +1,19 @@
+# Local scratch, caches and temporary output
+.tmp/
+brag-output/
+__pycache__/
+*.pyc
+
+# Hinglish generator output: rebuild it with tools/hinglish/build.py
+tools/hinglish/final.json
+tools/hinglish/valid.txt
+tools/hinglish/stats.json
+tools/hinglish/report.txt
+tools/hinglish/spell_in.txt
+tools/hinglish/spell_out.txt
+tools/hinglish/tests.txt
+tools/hinglish/expected.txt
+tools/hinglish/result.txt
+
+# Installers: download AutoHotkey from autohotkey.com
+*.exe

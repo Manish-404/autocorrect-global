@@ -1,0 +1,22 @@
+# English words that appear inside Hinglish text. They are known (so never touched) but get no Hinglish typo coverage;
+# AutoCorrect.ahk looks after English spelling.
+
+@ English words
+=phone =mobile =mobail =call =kaal =message =network =signal =wifi =internet =net =team =film =filmi =judge =copy
+=pen =pencil =light =lite =battery =charger =chargar =loan =ticket =tikit =result =cinema =sinema =theatre =office
+=salary =meeting =principal =teacher =sir =madam =clerk =class =school =college =pass =fail =topper =trophy =medal
+=rally =raily =party =station =platform =glass =gilaas =loan =note =notes =press =prass =surf =detergent
+=dustbin =mixie =carrom =ludo =chess =judge =wifi =sale =offer =bill =bank =card =ok =okay =hello =hi =bye
+=bus =train =taxi =auto =cycle =scooter =bike =car =truck =road =market =shop =mall =hotel =room =house =home
+=tension =problem =sorry =please =thanks =thank =welcome =good =bad =best =nice =cool =fine =super =great
+=time =date =day =night =morning =evening =today =tomorrow =yesterday =week =month =year =hour =minute =second
+=friend =friends =family =love =life =happy =sad =angry =sweet =funny =crazy =lazy =busy =free =late =early
+=exam =marks =percentage =assignment =project =practical =viva =syllabus =lecture =library =hostel =canteen
+=online =offline =update =download =upload =install =delete =share =send =reply =forward =group =chat =status
+=post =story =reel =video =photo =pic =image =file =folder =document =password =username =account =login
+=mobile =laptop =computer =screen =keyboard =mouse =speaker =camera =battery =charger =cable =button =switch
+=driver =doctor =police =engineer =manager =boss =owner =customer =client =worker =staff =member =captain
+=match =ground =wicket =ball =bat =run =runs =goal =score =player =coach =referee =stadium =tournament
+=movie =song =music =dance =show =serial =channel =news =paper =magazine =book =story =novel =poem
+=jungle =garden =park =mall =cafe =restaurant =pizza =burger =sandwich =coffee =juice =cake =biscuit =chocolate
+=birthday =anniversary =party =function =festival =wedding =marriage =engagement =honeymoon =holiday =vacation

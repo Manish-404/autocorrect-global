@@ -1,0 +1,182 @@
+# Chat shorthand: Hinglish words typed without their vowels. All of these are ON by default.
+# Only shorthand that cannot be an English word or abbreviation is listed.
+%enabled
+
+@ Chat shorthand: pronouns and question words
+nahi | nhi nhin nhii nhee
+kuch | kch kchh
+mujhe | mje mjhe
+mujhse | mjhse mujse
+mujhko | mjhko
+mujhmein | mjhme mjhmein
+tumhe | tmhe tmhey
+tumko | tmko
+tumse | tmse
+tumne | tmne
+tumhara | tmhara tumhra
+tumhari | tmhari tumhri
+tumhare | tmhare tumhre
+hume | hme hmein
+humko | hmko
+humse | hmse
+humne | hmne
+hamara | hmara
+hamari | hmari
+hamare | hmare
+kitna | ktna
+kitni | ktni
+kitne | ktne
+kyunki | kynki kyunk
+sabhi | sbhi
+sabko | sbko
+sabse | sbse
+sabka | sbka
+sabki | sbki
+sabke | sbke
+kabhi | kbhi
+
+@ Chat shorthand: common words
+bahut | bht bahuut
+shayad | shyd shayd
+zaroor | zrur jrur zroor jroor
+zaroori | zruri jruri zrori jrori
+matlab | mtlb mtlab
+agar | agr
+lekin | lkn lekn lkin
+jaldi | jldi
+thoda | thda
+thodi | thdi
+thode | thde
+hamesha | hmesha hmsha
+wapas | wps wpas
+bilkul | blkul bilkl
+pareshaan | prshan prshaan
+mushkil | mshkil mushkl
+ghar | ghr
+wala | wla
+wali | wli
+wale | wle
+wahan | whan
+yahan | yhan
+jahan | jhan
+pehle | phle
+pehla | phla
+pehli | phli
+badhiya | bdhiya bdiya
+accha | acchaa
+theek | thek theeq
+
+@ Chat shorthand: verbs
+karna | krna
+karta | krta
+karti | krti
+karte | krte
+karke | krke
+karo | kro
+kare | kre
+karega | krega
+karegi | kregi
+karenge | krenge
+karengi | krengi
+karunga | krunga
+karungi | krungi
+karoge | kroge
+karogi | krogi
+raha | rha
+rahi | rhi
+rahe | rhe
+rahta | rhta
+rahti | rhti
+rahte | rhte
+rahega | rhega
+rahegi | rhegi
+rahenge | rhenge
+rehna | rhna
+gaya | gya
+gayi | gyi
+gaye | gye
+batao | btao
+batana | btana
+bataya | btaya
+batata | btata
+batati | btati
+bataunga | btaunga
+chalo | chlo
+chalna | chlna
+chalta | chlta
+chalti | chlti
+chalte | chlte
+chala | chla
+chali | chli
+chalega | chlega
+chalegi | chlegi
+chalenge | chlenge
+dekho | dkho
+dekhna | dkhna
+dekha | dkha
+dekhi | dkhi
+dekhta | dkhta
+dekhti | dkhti
+dekhte | dkhte
+dekhunga | dkhunga
+bolna | blna
+sunao | snao
+likhna | lkhna
+likha | lkha
+likho | lkho
+likhta | lkhta
+padhna | pdhna
+padha | pdha
+padho | pdho
+padhai | pdhai
+padhta | pdhta
+milna | mlna
+milta | mlta
+milti | mlti
+milte | mlte
+milega | mlega
+milegi | mlegi
+milenge | mlenge
+samajh | smjh
+samjha | smjha
+samjhi | smjhi
+samjhe | smjhe
+samjhna | smjhna
+samjhao | smjhao
+samjhaya | smjhaya
+samjhta | smjhta
+samjhti | smjhti
+samjhte | smjhte
+samjhunga | smjhunga
+samjhega | smjhega
+bhejna | bhjna
+bhejo | bhjo
+bheja | bhja
+rukna | rkna
+ruko | rko
+lagta | lgta
+lagti | lgti
+lagte | lgte
+lagega | lgega
+lagna | lgna
+laga | lga
+lagi | lgi
+lage | lge
+lagao | lgao
+deta | dta
+deti | dti
+dete | dte
+dega | dga
+degi | dgi
+denge | dnge
+jayega | jyega
+jayegi | jyegi
+jayenge | jyenge
+sakta | skta
+sakti | skti
+sakte | skte
+sakega | skega
+sakegi | skegi
+sakenge | skenge
+honge | hnge
+hongi | hngi

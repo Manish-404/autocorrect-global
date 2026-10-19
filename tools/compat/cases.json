@@ -1,0 +1,38 @@
+{
+  "hinglish": {
+    "script": "AutoCorrectHinglish.ahk",
+    "meaning": "I am very hungry, give me something to eat quickly. Five fixes: a capital, chat shorthand (x2), swapped letters, and a fix triggered by the full stop right after the word.",
+    "typed": "Mjhe bht bhook lgi hai, kuhc khane ko do jldi.",
+    "expected": "Mujhe bahut bhook lagi hai, kuch khane ko do jaldi."
+  },
+  "english": {
+    "script": "",
+    "meaning": "The meeting is tomorrow and we definitely need to finish the budget. Four fixes (a capital, three common typos). No script is started for this one: it goes through the copy of AutoCorrect.ahk you already have running, because starting a second copy would replace yours.",
+    "typed": "Teh meeting is tommorow adn we definately need to finish teh budget.",
+    "expected": "The meeting is tomorrow and we definitely need to finish the budget."
+  },
+  "hindi": {
+    "script": "AutoCorrectHindi.ahk",
+    "meaning": "I did not see him, because I was not at home. Four fixes: missing anusvara and chandrabindu forms, and the danda ends the last word.",
+    "typed": "मेंने उसे नही देखा, क्योकि मैं घर पर नही था।",
+    "expected": "मैंने उसे नहीं देखा, क्योंकि मैं घर पर नहीं था।"
+  },
+  "word-demo": {
+    "script": "AutoCorrectHindi.ahk",
+    "meaning": "Today I did not see him/her. The line typed in the launch video's Word scene.",
+    "typed": "आज मेंने उसे नही देखा",
+    "expected": "आज मैंने उसे नहीं देखा"
+  },
+  "excel-demo": {
+    "script": "AutoCorrectHinglish.ahk",
+    "meaning": "House rent. The cell typed in the launch video's Excel scene.",
+    "typed": "ghr ka kiraya",
+    "expected": "ghar ka kiraya"
+  },
+  "powerpoint-demo": {
+    "script": "AutoCorrectHinglish.ahk",
+    "meaning": "Our story, our journey. The slide title typed in the launch video's PowerPoint scene.",
+    "typed": "Hmari kahani, hmara safar",
+    "expected": "Hamari kahani, hamara safar"
+  }
+}

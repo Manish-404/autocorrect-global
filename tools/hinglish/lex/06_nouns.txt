@@ -1,0 +1,98 @@
+# Everyday nouns. Words only; spelling variants and typos are generated.
+
+@ Home and household
+kamra rasoi aangan chhat deewar darwaza khidki seedhi bistar takiya razai kambal palang kursi mez
+almari sandook bartan thali katori chammach kadchhi tawa kadhai patila dekchi chulha silender pankha
+batti bijli nal tanki balti jhadu pocha sabun kanghi sheesha aaina taala chaabi baagh bagicha phatak
+mohalla padosi makaan kiraya kiraayedaar malkin maalik darbaan chowkidar bartan chaadar gaddi
+bichauna gadda parda darri qaaleen chatai khatiya morcha
+
+@ Clothes
+kapde kameez kurta pajama salwar dupatta saree lehenga sherwani dhoti topi pagdi joota chappal
+mauza rumaal chunni shawl langot banyan gamchha
+
+@ Food and drink
+paratha puri samosa pakoda jalebi laddu barfi halwa kheer rasgulla dosa idli sambhar chutney achar
+papad raita biryani pulao khichdi kadhi paneer ghee tel haldi jeera dhaniya adrak lehsun gobhi palak
+bhindi baingan karela lauki tinda kaddu mooli gajar matar kheera nimbu santra seb kela aam angoor
+anaar papita tarbooz kharbooza amrud chikoo nariyal kaju badam kishmish pista akhrot chaat golgappa
+bhel tikki kulfi lassi sharbat nimbupani jaljeera ganna gud shakkar misri masala saunf elaichi laung
+dalchini kali mirch hing tadka bhujia namkeen mathri kachori jhalmuri thukpa chowmein maggi
+
+@ Body
+sar maatha aankh hont jeebh gala kandha baazu nakhun chhaati pet tang ghutna jigar fefda gurda
+chamdi tvacha daadhi moonchh kohni kalai anguthi angootha edi
+
+@ Animals and birds
+kutta billi gaay bhains bakri bhed ghoda gadha hathi sher bhalu bandar lomdi cheeta haran khargosh
+chuha saanp machhli chidiya kabootar tota mor kauwa cheel ullu murgi batakh makkhi machhar cheenti
+titli bichhu gilhari ooont bail saand soovar bhediya lakadbaggha tendua mendhak kachhua kekda
+
+@ Nature
+talab jheel fasal kheti ret phul phool ghaas kinara lehar toofan aandhi chhaanv barf kohra bijli
+jwalamukhi bhookamp baadh sookha ped patta jad daali kali phal beej kaanta jhaadi jungle
+
+@ Government and society
+neta mantri vidhayak police thana adalat kanoon jail jurm chor daaku sipahi fauj sainik rajya pul
+chunav vote sansad sarkari nagarik samaj samaaj rashtra rashtriya nagar panchayat sarpanch patwari
+tehsil zila janta awaam hukumat shasan prashasan rajneeti kranti andolan aarakshan ghotala bhrashtachar
+rishwat tax lagaan jurmana saza giraftar muqadma faisla gawah sabut vakeel nyay anyay
+
+@ Professions
+vakeel master mazdoor kisaan driver mistri darzi dhobi baniya maulvi padri pujari sadhu fakir
+bhikhari lohaar sunaar kumhaar badhai nai halwai mochi bijliwala doodhwala sabziwala chaiwala
+paanwala rickshawala dhobi mali chaprasi babu afsar karmchari karmachari adhyapak shikshak
+vaidya hakeem kalakaar gayak lekhak kavi shayar patrakar vyapari dalal thekedar
+
+@ Transport and travel
+gaadi jahaaz rickshaw tempo adda chauraha tikat safar yatra musafir yatri manzil safaree sadak
+raasta pagdandi gali nukkad sarai dharamshala
+
+@ Health
+bimari ilaaj aspataal bukhaar sardard chakkar ulti dast patti dawakhana vaid hakim nuskha kadha
+kamzori motapa patlapan thakan nind neend jukam zukam khaansi dard
+
+@ Time
+pal ghadi ghanta pehr sadi yug subah dopahar tadke savera sandhya shaam raat madhyaratri
+
+@ Mind and abstract
+vichaar iraada irada maqsad lakshya ichha mann buddhi akal bhool haq hak adhikar farz kaamyabi
+nakaami safalta asafalta bhay shanti zehan zameer imaan dharm dharam karm kismat taqdeer naseeb
+bhagya qudrat kudrat sanskar sanskriti parampara riwaaj rivaaj rasm
+
+@ Communication and media
+awaaz shor batein kissa geet gaana sangeet khabar akhbaar patra chitthi sandesh samachar
+vigyapan kavita ghazal sher shayari nazm doha chaupai kahaani upanyas natak nautanki
+
+@ Festivals and religion
+tyohaar tyauhaar diwali dussehra navratri holi eid rakhi raksha bandhan janmashtami ganesh chaturthi
+karwa chauth chhath lohri baisakhi pongal onam mela jhanda jhaanki aarti pooja puja mandir masjid
+gurudwara girja bhagwan ishwar khuda allah dua aashirwad kripa daya prarthana namaaz roza
+tirth teerth yatra darshan prasad bhandara jaagran satsang katha kirtan bhajan qawwali
+
+@ Wedding and family occasions
+shaadi byah dulha dulhan baraat mehndi sagai vidaai pheras mangalsutra sindoor haldi sangeet
+rasm godbharai mundan namkaran janamdin barsi tehravi shok matam
+
+@ Shop and money
+grahak bakaya udhaar qarz karz byaj bachat muft sauda thaila rasid lifafa hisaab hisab kimat
+mol bhaav daam munafa nuksaan ghata laabh pagaar vetan tankhwah inaam purskar jurmana
+mehngai sastai bazaar mandi dukaan thok phutkar badla badlaav chillar sikka note
+
+@ Work and office
+kaam dafter daftar dastakhat naukri afsar karmchari sahayak madad sahayata sujhav salah faisla
+yojana mudda samasya hal koshish tareeka tarika jimmedari zimmedari mehnat
+
+@ School
+padhai pariksha kaksha vidyalay pustak prashn sawal uttar jawab shikshak vidyarthi chhatra
+chhatrawas daakhila adhyay paath abhyas likhai sulekh nakal ratta number ank natija
+vishwavidyalay mahavidyalay
+
+@ Everyday things
+cheez saman saaman dhang aakar roop rang kahaan tarah jagah mauka maukaa lifafa dibba dibbi
+sandook baksa tala chaabi rassi dhaga sui kainchi chaaku hathoda keel pencil kalam syahi kaagaz
+kitaab kapi
+
+@ Plurals and oblique forms
+baatein cheezein aankhein raatein yaadein kitaabein kitabein ladkiyaan ladkiyan auratein aadmiyon
+dostoon logon bachchon ghar gharon doston bhaiyon behenon

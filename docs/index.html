@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AutoCorrect Global · Typos fixed as you type in English, हिंदी and Hinglish</title>
+  <meta name="description" content="Free autocorrect for Windows that fixes typos as you type: English, Hindi (Devanagari) and Hinglish. 39,000+ ready-made fixes. Tested in Word, Excel, PowerPoint, Chrome, Firefox and WordPad.">
+  <link rel="canonical" href="https://manish-404.github.io/autocorrect-global/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbfaf8">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c0e1b">
+  <script>
+    /* Apply a saved light/dark choice before the page paints, so it never flashes the other theme */
+    try {
+      const saved = localStorage.getItem('acg-theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) { /* storage blocked: follow the device */ }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AutoCorrect Global">
+  <meta property="og:title" content="AutoCorrect Global · Typos fix themselves">
+  <meta property="og:description" content="Free autocorrect for Windows in English, हिंदी and Hinglish. Tested in Word, Excel, PowerPoint, Chrome and Firefox.">
+  <meta property="og:url" content="https://manish-404.github.io/autocorrect-global/">
+  <meta property="og:image" content="https://manish-404.github.io/autocorrect-global/media/poster.jpg">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <meta property="og:image:alt" content="AutoCorrect Global: English, Hindi and Hinglish autocorrect for Windows. Star it on GitHub.">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AutoCorrect Global",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Windows",
+    "description": "System-wide autocorrect for Windows in English, Hindi (Devanagari) and Hinglish, built on AutoHotkey.",
+    "url": "https://manish-404.github.io/autocorrect-global/",
+    "downloadUrl": "https://github.com/Manish-404/autocorrect-global/archive/refs/heads/main.zip",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #fbfaf8; --bg-alt: #f4f2ee; --card: #ffffff; --border: #e8e4de; --border-strong: #d7d2ca;
+      --text: #1b1a22; --muted: #5f5c6b; --faint: #8c8999;
+      --accent: #f2600c; --accent-text: #c2410c; --accent-soft: rgba(242, 96, 12, 0.1); --accent-line: rgba(242, 96, 12, 0.4);
+      --btn: #f2600c; --btn-hover: #dd5208; --hover: rgba(27, 26, 34, 0.05);
+      --glow-a: rgba(242, 96, 12, 0.14); --glow-b: rgba(20, 184, 138, 0.1);
+      --shadow: 0 1px 2px rgba(27, 26, 34, 0.05), 0 8px 24px -12px rgba(27, 26, 34, 0.14);
+      --shadow-lg: 0 1px 2px rgba(27, 26, 34, 0.06), 0 34px 70px -28px rgba(27, 26, 34, 0.3);
+      --code-bg: #f1eee9;
+      --ok: #0a7d62; --ok-soft: rgba(20, 184, 138, 0.14); --bad: #e5484d; --star: #e8a917;
+      --radius: 18px; --maxw: 1120px; --gutter: 24px;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Nirmala UI", "Noto Sans Devanagari", sans-serif;
+      --mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+      color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0c0e1b; --bg-alt: #0f1224; --card: #151830; --border: #232745; --border-strong: #343959;
+        --text: #f1eee9; --muted: #a9a6ba; --faint: #747189;
+        --accent: #ff8a3d; --accent-text: #ffb27a; --accent-soft: rgba(255, 138, 61, 0.14); --accent-line: rgba(255, 138, 61, 0.45);
+        --btn: #f2600c; --btn-hover: #ff7a24; --hover: rgba(255, 255, 255, 0.06);
+        --glow-a: rgba(255, 138, 61, 0.2); --glow-b: rgba(20, 184, 138, 0.12);
+        --shadow: 0 10px 30px -14px rgba(0, 0, 0, 0.6); --shadow-lg: 0 40px 80px -30px rgba(0, 0, 0, 0.8);
+        --code-bg: #1b1e38; --ok: #34d399; --ok-soft: rgba(52, 211, 153, 0.14); --bad: #fb7185; --star: #f5b83d;
+        color-scheme: dark;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #0c0e1b; --bg-alt: #0f1224; --card: #151830; --border: #232745; --border-strong: #343959;
+      --text: #f1eee9; --muted: #a9a6ba; --faint: #747189;
+      --accent: #ff8a3d; --accent-text: #ffb27a; --accent-soft: rgba(255, 138, 61, 0.14); --accent-line: rgba(255, 138, 61, 0.45);
+      --btn: #f2600c; --btn-hover: #ff7a24; --hover: rgba(255, 255, 255, 0.06);
+      --glow-a: rgba(255, 138, 61, 0.2); --glow-b: rgba(20, 184, 138, 0.12);
+      --shadow: 0 10px 30px -14px rgba(0, 0, 0, 0.6); --shadow-lg: 0 40px 80px -30px rgba(0, 0, 0, 0.8);
+      --code-bg: #1b1e38; --ok: #34d399; --ok-soft: rgba(52, 211, 153, 0.14); --bad: #fb7185; --star: #f5b83d;
+      color-scheme: dark;
+    }
+    @media (max-width: 600px) { :root { --gutter: 16px; } }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 400 17px/1.6 var(--font); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    img, video, svg { max-width: 100%; }
+    a { color: var(--accent-text); text-underline-offset: 3px; }
+    h1, h2, h3 { text-wrap: balance; margin: 0; }
+    p, li, dd { text-wrap: pretty; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+    code { font-family: var(--mono); font-size: 0.88em; padding: 0.12em 0.42em; border-radius: 6px; background: var(--code-bg); border: 1px solid var(--border); overflow-wrap: anywhere; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+    .skip { position: absolute; left: 16px; top: -60px; z-index: 100; padding: 10px 16px; border-radius: 10px; background: var(--btn); color: #fff; font-weight: 600; }
+    .skip:focus { top: 12px; }
+    .wrap { width: min(100% - 2 * var(--gutter), var(--maxw)); margin-inline: auto; }
+    .i { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+    .i-fill { fill: currentColor; stroke: none; }
+
+    /* ---------- buttons ---------- */
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 48px; padding: 0 22px; border-radius: 12px; border: 1px solid transparent; font: 600 16px/1 var(--font); text-decoration: none; white-space: nowrap; cursor: pointer; transition: background-color .15s, border-color .15s, transform .15s; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--btn); color: #fff; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 10px 28px -12px rgba(242, 96, 12, 0.9); }
+    .btn-primary:hover { background: var(--btn-hover); }
+    .btn-ghost { background: var(--card); color: var(--text); border-color: var(--border-strong); }
+    .btn-ghost:hover { border-color: var(--faint); }
+    .btn-star { background: var(--card); color: var(--text); border-color: color-mix(in srgb, var(--star) 60%, transparent); }
+    .btn-star:hover { border-color: var(--star); }
+    .btn-sm { min-height: 38px; padding: 0 14px; font-size: 14.5px; border-radius: 10px; }
+    .btn .i { width: 19px; height: 19px; }
+    .i.star { color: var(--star); animation: star-glow 2.2s ease-in-out infinite; }
+    @keyframes star-glow {
+      0%, 100% { filter: drop-shadow(0 0 1px rgba(232, 169, 23, 0.35)); opacity: 0.85; }
+      50% { filter: drop-shadow(0 0 7px rgba(232, 169, 23, 0.95)) drop-shadow(0 0 15px rgba(232, 169, 23, 0.5)); opacity: 1; }
+    }
+    @media (max-width: 480px) { .cta .btn { flex: 1 1 100%; } }
+
+    /* ---------- header ---------- */
+    .site-head { position: sticky; top: 0; z-index: 50; background: var(--bg); background: color-mix(in srgb, var(--bg) 82%, transparent); -webkit-backdrop-filter: saturate(1.5) blur(14px); backdrop-filter: saturate(1.5) blur(14px); border-bottom: 1px solid var(--border); }
+    .head-inner { display: flex; align-items: center; gap: 20px; height: 66px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 17px; letter-spacing: -0.01em; }
+    .brand svg { width: 30px; height: 30px; }
+    .nav { display: flex; gap: 2px; margin-left: 6px; }
+    .nav a { padding: 8px 12px; border-radius: 8px; color: var(--muted); text-decoration: none; font-size: 15px; font-weight: 500; }
+    .nav a:hover { color: var(--text); background: var(--hover); }
+    .head-actions { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+    @media (max-width: 900px) { .nav { display: none; } }
+    @media (max-width: 520px) { .head-actions .btn-primary { display: none; } .brand span { font-size: 16px; } }
+    .theme-toggle { display: grid; place-items: center; width: 38px; height: 38px; flex: none; padding: 0; border: 0; border-radius: 10px; background: transparent; color: var(--muted); cursor: pointer; }
+    .theme-toggle:hover { color: var(--text); background: var(--hover); }
+    .theme-toggle .sun { display: none; }
+    :root[data-theme="dark"] .theme-toggle .sun { display: block; }
+    :root[data-theme="dark"] .theme-toggle .moon { display: none; }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .theme-toggle .sun { display: block; }
+      :root:not([data-theme="light"]) .theme-toggle .moon { display: none; }
+    }
+
+    /* ---------- sections ---------- */
+    .section { padding: 100px 0; }
+    .band { background: var(--bg-alt); border-block: 1px solid var(--border); }
+    @media (max-width: 700px) { .section { padding: 68px 0; } }
+    .section-head { max-width: 760px; margin-bottom: 48px; }
+    .section-head.center { margin-inline: auto; text-align: center; }
+    .kicker { margin: 0 0 12px; color: var(--accent-text); font-size: 13.5px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; }
+    h2 { font-size: clamp(2rem, 4.4vw, 3rem); line-height: 1.08; letter-spacing: -0.035em; font-weight: 700; }
+    .sub { margin: 16px 0 0; color: var(--muted); font-size: 1.12rem; }
+
+    /* ---------- hero ---------- */
+    .hero { position: relative; padding: 72px 0 92px; overflow: hidden; overflow: clip; }
+    .hero::before { content: ""; position: absolute; inset: -120px 0 auto; height: 900px; pointer-events: none; background: radial-gradient(560px 380px at 80% 40%, var(--glow-a), transparent 70%), radial-gradient(520px 340px at 10% 14%, var(--glow-b), transparent 70%); }
+    .hero-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 56px; align-items: center; }
+    @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; gap: 44px; } .hero { padding-top: 48px; } }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; padding: 7px 14px 7px 12px; border-radius: 999px; background: var(--accent-soft); border: 1px solid var(--accent-line); color: var(--accent-text); font-size: 14px; font-weight: 600; }
+    .eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+    h1 { margin-top: 22px; font-size: clamp(2.8rem, 7vw, 5.2rem); line-height: 1.02; letter-spacing: -0.045em; font-weight: 700; }
+    h1 em { font-style: normal; color: var(--accent); }
+    .lede { margin: 24px 0 0; max-width: 34em; font-size: 1.22rem; color: var(--muted); }
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .watch { margin: 20px 0 0; }
+    .watch a { display: inline-flex; align-items: center; gap: 8px; color: var(--text); font-weight: 600; text-decoration: none; }
+    .watch a:hover { color: var(--accent-text); }
+    .watch .i { width: 18px; height: 18px; color: var(--accent); }
+    .facts { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 30px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 15px; }
+    .facts li { display: inline-flex; align-items: center; gap: 8px; }
+    .facts .i { color: var(--ok); width: 18px; height: 18px; }
+
+    /* typing demo card */
+    .demo { position: relative; border-radius: 24px; background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow-lg); overflow: hidden; }
+    .demo-bar { display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-bottom: 1px solid var(--border); background: var(--bg-alt); font-size: 14.5px; font-weight: 600; color: var(--muted); }
+    .demo-bar .dot { width: 14px; height: 14px; border-radius: 5px; background: linear-gradient(135deg, #ffa24d, #f2600c); }
+    .demo-badge { margin-left: auto; padding: 4px 12px; border-radius: 999px; background: var(--ok-soft); color: var(--ok); font-size: 13.5px; font-weight: 700; white-space: nowrap; transition: transform .12s; }
+    .demo-body { padding: 32px 30px 26px; min-height: 250px; display: flex; flex-direction: column; }
+    .demo-lang { align-self: flex-start; padding: 5px 14px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-text); border: 1px solid var(--accent-line); font-size: 14px; font-weight: 700; }
+    .demo-text { flex: 1; margin-top: 22px; font-size: clamp(1.7rem, 3.2vw, 2.3rem); line-height: 1.4; font-weight: 500; letter-spacing: -0.01em; white-space: pre-wrap; min-height: 3em; }
+    .demo-text.hi { font-family: "Nirmala UI", "Noto Sans Devanagari", "Mangal", var(--font); }
+    .demo-text .typo { text-decoration: underline wavy var(--bad); text-decoration-thickness: 2.5px; text-underline-offset: 7px; }
+    .demo-text .w { border-radius: 8px; padding: 0 4px; margin: 0 -4px; }
+    .caret { display: inline-block; width: 3px; height: 1.05em; margin-left: 2px; vertical-align: -0.14em; border-radius: 2px; background: var(--accent); animation: blink 1.05s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .demo-note { margin: 18px 0 0; min-height: 1.6em; color: var(--muted); font-size: 15px; }
+    .demo-note b { color: var(--ok); font-weight: 700; }
+    .demo-dots { display: flex; gap: 8px; margin-top: 14px; }
+    .demo-dots i { width: 22px; height: 4px; border-radius: 2px; background: var(--border-strong); transition: background .2s; }
+    .demo-dots i.on { background: var(--accent); }
+
+    /* ---------- video ---------- */
+    .video-wrap { max-width: 980px; margin-inline: auto; }
+    .video-frame { position: relative; border-radius: 22px; overflow: hidden; background: #0c0e1b; border: 1px solid var(--border-strong); box-shadow: var(--shadow-lg); aspect-ratio: 16 / 9; }
+    .video-frame video { display: block; width: 100%; height: 100%; object-fit: cover; background: #0c0e1b; }
+    .video-note { margin: 18px auto 0; max-width: 46em; text-align: center; color: var(--muted); font-size: 14.5px; }
+
+    /* ---------- where you can use it ---------- */
+    .cases { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 18px; }
+    .case { padding: 24px 24px 22px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow); }
+    .case-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .case h3 { font-size: 1.15rem; letter-spacing: -0.01em; }
+    .tag { padding: 3px 11px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-text); border: 1px solid var(--accent-line); font-size: 12.5px; font-weight: 700; white-space: nowrap; }
+    .case-ex { margin-top: 16px; display: grid; gap: 6px; font-size: 1.02rem; }
+    .case-ex .from { color: var(--muted); text-decoration: underline wavy var(--bad); text-decoration-thickness: 1.5px; text-underline-offset: 5px; text-decoration-skip-ink: none; }
+    .case-ex .to { font-weight: 600; }
+    .case-ex .to::before { content: "→ "; color: var(--ok); font-weight: 700; }
+    .case-ex .hi, .hi { font-family: "Nirmala UI", "Noto Sans Devanagari", "Mangal", var(--font); }
+    .case p { margin: 14px 0 0; color: var(--muted); font-size: 15px; }
+    .matrix-wrap { margin-top: 56px; }
+    .matrix-wrap h3 { font-size: 1.5rem; letter-spacing: -0.02em; }
+    .matrix-wrap > p { margin: 10px 0 22px; color: var(--muted); max-width: 52em; }
+    .table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); }
+    table { width: 100%; border-collapse: collapse; font-size: 16px; min-width: 560px; }
+    th, td { padding: 14px 18px; text-align: center; border-bottom: 1px solid var(--border); }
+    th:first-child, td:first-child { text-align: left; }
+    thead th { background: var(--bg-alt); font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+    tbody tr:last-child td { border-bottom: 0; }
+    @media (max-width: 640px) {   /* all four columns fit a phone: no sideways scrolling */
+      table { min-width: 0; font-size: 14.5px; }
+      th, td { padding: 11px 6px; }
+      thead th { font-size: 11.5px; letter-spacing: 0.02em; }
+      th:first-child, td:first-child { padding-left: 14px; }
+    }
+    td.yes { color: var(--ok); }
+    td.yes .i { width: 22px; height: 22px; stroke-width: 2.6; }
+    td.na { color: var(--faint); }
+    .fine { margin: 16px 0 0; color: var(--muted); font-size: 14px; max-width: 62em; }
+    .limits { margin-top: 30px; padding: 22px 24px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--border); }
+    .limits h4 { margin: 0 0 10px; font-size: 1.05rem; }
+    .limits ul { margin: 0; padding-left: 1.2em; color: var(--muted); font-size: 15.5px; }
+    .limits li + li { margin-top: 6px; }
+
+    /* ---------- how it works ---------- */
+    .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    @media (max-width: 860px) { .steps { grid-template-columns: 1fr; } }
+    .step { padding: 26px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow); }
+    .step .n { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; }
+    .step h3 { margin-top: 16px; font-size: 1.25rem; letter-spacing: -0.015em; }
+    .step p { margin: 10px 0 0; color: var(--muted); font-size: 15.5px; }
+    .keys { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 18px; font-size: 20px; }
+    .key { display: inline-flex; align-items: center; justify-content: center; min-width: 38px; height: 40px; padding: 0 10px; border-radius: 9px; background: var(--bg-alt); border: 1px solid var(--border-strong); border-bottom-width: 3px; font-family: var(--mono); font-size: 17px; font-weight: 600; }
+    .keys .arrow { color: var(--faint); }
+    .keys .out { color: var(--ok); font-weight: 700; font-family: var(--mono); font-size: 18px; }
+    .under-hood { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 18px; }
+    @media (max-width: 860px) { .under-hood { grid-template-columns: 1fr; } }
+    .panel { padding: 26px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--border); }
+    .panel h3 { font-size: 1.2rem; letter-spacing: -0.015em; }
+    .panel p, .panel li { color: var(--muted); font-size: 15.5px; }
+    .panel ul { margin: 12px 0 0; padding-left: 1.2em; }
+    .panel li + li { margin-top: 6px; }
+    .stats { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 18px; }
+    .stat { flex: 1 1 130px; padding: 14px 16px; border-radius: 14px; background: var(--bg-alt); border: 1px solid var(--border); }
+    .stat b { display: block; font-size: 1.6rem; letter-spacing: -0.02em; }
+    .stat span { color: var(--muted); font-size: 13.5px; }
+
+    /* ---------- try it ---------- */
+    .try { max-width: 860px; margin-inline: auto; padding: 26px; border-radius: 22px; background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow-lg); }
+    .try label { display: block; font-weight: 600; margin-bottom: 10px; }
+    .try textarea { width: 100%; min-height: 150px; padding: 16px 18px; border-radius: 14px; border: 1.5px solid var(--border-strong); background: var(--bg); color: var(--text); font: 500 22px/1.5 var(--font); resize: vertical; }
+    .try textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+    .try-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 14px; }
+    .try-row .lead { color: var(--muted); font-size: 14.5px; margin-right: 4px; }
+    .chipbtn { padding: 7px 14px; border-radius: 999px; background: var(--bg-alt); border: 1px solid var(--border-strong); color: var(--text); font: 500 15px var(--font); cursor: pointer; }
+    .chipbtn:hover { border-color: var(--accent); }
+    .try-status { margin: 14px 0 0; min-height: 1.7em; color: var(--muted); font-size: 15.5px; }
+    .try-status b { color: var(--ok); }
+    .try-note { margin: 10px 0 0; color: var(--faint); font-size: 13.5px; }
+
+    /* ---------- install ---------- */
+    .install { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 36px; align-items: start; }
+    @media (max-width: 900px) { .install { grid-template-columns: 1fr; } }
+    .install ol { margin: 0; padding: 0; list-style: none; counter-reset: s; }
+    .install li { position: relative; padding: 0 0 26px 58px; counter-increment: s; }
+    .install li::before { content: counter(s); position: absolute; left: 0; top: 0; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; }
+    .install li:not(:last-child)::after { content: ""; position: absolute; left: 18px; top: 44px; bottom: 6px; width: 2px; background: var(--border-strong); }
+    .install h3 { font-size: 1.2rem; letter-spacing: -0.01em; }
+    .install li p { margin: 6px 0 0; color: var(--muted); font-size: 15.5px; }
+    .three { display: grid; gap: 12px; }
+    .file { display: flex; align-items: flex-start; gap: 14px; padding: 16px 18px; border-radius: 14px; background: var(--card); border: 1px solid var(--border); }
+    .file b { display: block; font-family: var(--mono); font-size: 15px; }
+    .file span { color: var(--muted); font-size: 14.5px; }
+    .file .hk { margin-left: auto; padding: 3px 10px; border-radius: 8px; background: var(--code-bg); border: 1px solid var(--border); font-family: var(--mono); font-size: 13px; white-space: nowrap; }
+    @media (max-width: 520px) { .file { flex-wrap: wrap; } .file .hk { margin-left: 0; } }
+
+    /* ---------- faq ---------- */
+    .faq { max-width: 860px; margin-inline: auto; }
+    .faq details { border-bottom: 1px solid var(--border); }
+    .faq details:first-of-type { border-top: 1px solid var(--border); }
+    .faq summary { position: relative; padding: 22px 44px 22px 0; cursor: pointer; list-style: none; font-size: 1.1rem; font-weight: 600; letter-spacing: -0.01em; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; position: absolute; right: 6px; top: 50%; transform: translateY(-50%); font-size: 1.6rem; font-weight: 400; color: var(--faint); }
+    .faq details[open] summary::after { content: "–"; }
+    .faq details > p { margin: -6px 0 24px; max-width: 62em; color: var(--muted); }
+
+    /* ---------- closing call to action ---------- */
+    .closing { position: relative; overflow: hidden; overflow: clip; padding: 108px 0; text-align: center; }
+    .closing::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(640px 300px at 50% 60%, var(--glow-a), transparent 70%); }
+    .closing .wrap { position: relative; }
+    .closing p { margin: 16px auto 0; max-width: 36em; color: var(--muted); font-size: 1.12rem; }
+    .closing .cta { justify-content: center; }
+    .closing .star-note { max-width: 46em; margin-top: 22px; font-size: 14.5px; }
+
+    /* ---------- footer ---------- */
+    .site-foot { padding: 44px 0 52px; border-top: 1px solid var(--border); background: var(--bg-alt); }
+    .foot-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px; }
+    .foot-links { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+    .foot-links a { color: var(--muted); font-size: 15px; text-decoration: none; }
+    .foot-links a:hover { color: var(--text); text-decoration: underline; }
+    .legal { margin: 26px 0 0; max-width: 64em; color: var(--muted); font-size: 13.5px; }
+    .legal + .legal { margin-top: 10px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffa24d" /><stop offset="1" stop-color="#f2600c" /></linearGradient>
+      <symbol id="logo" viewBox="0 0 128 128">
+        <rect width="128" height="128" rx="30" fill="url(#lg)" />
+        <path d="M28 96 L56 32 L84 96 M38 76 H74" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="94" cy="94" r="27" fill="#14b88a" stroke="#fff" stroke-width="6" />
+        <path d="M82 94 L91 103 L107 85" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3L2.85 9.45l6.32-.92z" /></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 20h16" /></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" /></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z" /></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" /></symbol>
+      <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.9.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0012 2z" /></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-head">
+    <div class="wrap head-inner">
+      <a class="brand" href="#top" aria-label="AutoCorrect Global, top of page"><svg aria-hidden="true"><use href="#logo" /></svg><span>AutoCorrect Global</span></a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#where">Where it works</a><a href="#how">How it works</a><a href="#try">Try it</a><a href="#install">Install</a><a href="#faq">FAQ</a>
+      </nav>
+      <div class="head-actions">
+        <a class="btn btn-star btn-sm" href="https://github.com/Manish-404/autocorrect-global"><svg class="i i-fill star" aria-hidden="true"><use href="#i-star" /></svg>Star<span class="sr-only"> on GitHub</span></a>
+        <a class="btn btn-primary btn-sm" href="https://github.com/Manish-404/autocorrect-global/archive/refs/heads/main.zip"><svg class="i" aria-hidden="true"><use href="#i-download" /></svg>Download</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme" title="Switch theme"><svg class="i moon" aria-hidden="true"><use href="#i-moon" /></svg><svg class="i sun" aria-hidden="true"><use href="#i-sun" /></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- hero -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow"><span class="dot"></span>Free · open source · for Windows</span>
+          <h1>Typos <em>fix themselves.</em></h1>
+          <p class="lede">A tiny background script that corrects your typing as you go, in <b>English</b>, <b class="hi">हिंदी</b> (Devanagari) and <b>Hinglish</b>. No account, no internet, no special box to type in. Just type.</p>
+          <div class="cta">
+            <a class="btn btn-star" href="https://github.com/Manish-404/autocorrect-global"><svg class="i i-fill star" aria-hidden="true"><use href="#i-star" /></svg>Star on GitHub</a>
+            <a class="btn btn-primary" href="https://github.com/Manish-404/autocorrect-global/archive/refs/heads/main.zip"><svg class="i" aria-hidden="true"><use href="#i-download" /></svg>Download ZIP</a>
+          </div>
+          <p class="watch"><a href="#video"><svg class="i i-fill" aria-hidden="true"><use href="#i-play" /></svg>Watch the 24-second video</a></p>
+          <ul class="facts">
+            <li><svg class="i" aria-hidden="true"><use href="#i-check" /></svg>39,000+ ready-made fixes</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check" /></svg>Word, Excel, PowerPoint, Chrome, Firefox</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check" /></svg>Plain-text scripts you can read</li>
+          </ul>
+        </div>
+
+        <div class="demo" aria-label="Live demo: a typo being typed and fixed">
+          <div class="demo-bar"><span class="dot"></span>Any text box<span class="demo-badge" id="demoBadge" style="visibility:hidden"></span></div>
+          <div class="demo-body">
+            <span class="demo-lang" id="demoLang">English</span>
+            <div class="demo-text" id="demoText" aria-live="off">Send the report tomorrow</div>
+            <p class="demo-note" id="demoNote">Fixed the moment you press space.</p>
+            <div class="demo-dots" id="demoDots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- video -->
+    <section class="section band" id="video" aria-labelledby="video-title">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="kicker">24 seconds</p>
+          <h2 id="video-title">See where it works.</h2>
+          <p class="sub">Chats, email, Word, Excel, PowerPoint, comments and search bars.</p>
+        </div>
+        <div class="video-wrap">
+          <div class="video-frame">
+            <video controls preload="metadata" poster="media/poster.jpg" playsinline>
+              <source src="media/autocorrect-global.mp4" type="video/mp4">
+              Your browser can't play this video. <a href="media/autocorrect-global.mp4">Download it</a>.
+            </video>
+          </div>
+          <p class="video-note">The windows in the video are animated, but every sentence is a real entry from the lists, and the Word, Excel and PowerPoint lines were also typed into the real programs (see the table below). Video made with <a href="https://github.com/latent-spaces/brag">brag</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- where it works -->
+    <section class="section" id="where" aria-labelledby="where-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Where it works</p>
+          <h2 id="where-title">Use it wherever you type.</h2>
+          <p class="sub">It runs in the background and watches what you type, so any Windows text box that accepts keystrokes is a candidate. These are the everyday places we tried, with the exact line we typed in each.</p>
+        </div>
+
+        <div class="cases">
+          <article class="case"><div class="case-top"><h3>Chats and messages</h3><span class="tag">Hinglish</span></div>
+            <div class="case-ex"><span class="from">Mjhe bht bhook lgi hai</span><span class="to">Mujhe bahut bhook lagi hai</span></div>
+            <p>Chat shorthand with the vowels dropped, fixed as you hit space.</p></article>
+          <article class="case"><div class="case-top"><h3>Email</h3><span class="tag">English</span></div>
+            <div class="case-ex"><span class="from">Send teh report tommorow</span><span class="to">Send the report tomorrow</span></div>
+            <p>The classic typos, gone before you press send.</p></article>
+          <article class="case"><div class="case-top"><h3>Word documents</h3><span class="tag">हिंदी</span></div>
+            <div class="case-ex hi"><span class="from">आज मेंने उसे नही देखा</span><span class="to">आज मैंने उसे नहीं देखा</span></div>
+            <p>Missing matras and chandrabindu, fixed in Devanagari.</p></article>
+          <article class="case"><div class="case-top"><h3>Excel cells</h3><span class="tag">Hinglish</span></div>
+            <div class="case-ex"><span class="from">ghr ka kiraya</span><span class="to">ghar ka kiraya</span></div>
+            <p>Labels in your expense sheet, typed once and spelled right.</p></article>
+          <article class="case"><div class="case-top"><h3>PowerPoint titles</h3><span class="tag">Hinglish</span></div>
+            <div class="case-ex"><span class="from">Hmari kahani, hmara safar</span><span class="to">Hamari kahani, hamara safar</span></div>
+            <p>Slide titles and bullets, with a comma or full stop ending the word.</p></article>
+          <article class="case"><div class="case-top"><h3>Comments and captions</h3><span class="tag">Hinglish</span></div>
+            <div class="case-ex"><span class="from">Bdhiya video, awaaz thdi dhimi</span><span class="to">Badhiya video, awaaz thodi dhimi</span></div>
+            <p>Replies, posts and captions in any browser text box.</p></article>
+          <article class="case"><div class="case-top"><h3>Search and address bars</h3><span class="tag">Hinglish</span></div>
+            <div class="case-ex"><span class="from">shyd kal barish hogi</span><span class="to">shayad kal barish hogi</span></div>
+            <p>Search the web without second-guessing your spelling. Chrome and Firefox both pass.</p></article>
+        </div>
+
+        <div class="matrix-wrap" id="tested">
+          <h3>What we actually tested</h3>
+          <p>Not a guess: a script opens each program, types a real sentence the way a person would, copies what ended up in the box and compares it. You can run it yourself (<code>tools/compat</code>).</p>
+          <div class="table-scroll">
+            <table>
+              <caption class="sr-only">Compatibility results by program and language</caption>
+              <thead><tr><th scope="col">Program</th><th scope="col">English</th><th scope="col">Hinglish</th><th scope="col" class="hi">हिंदी</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">WordPad</th><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td></tr>
+                <tr><th scope="row">Microsoft Word</th><td class="na" title="Office has its own AutoCorrect, so an English test would not show which tool fixed the word">n/a</td><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td></tr>
+                <tr><th scope="row">Microsoft Excel</th><td class="na">n/a</td><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td></tr>
+                <tr><th scope="row">Microsoft PowerPoint</th><td class="na">n/a</td><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td></tr>
+                <tr><th scope="row">Chrome: text box on a page</th><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td></tr>
+                <tr><th scope="row">Chrome: address bar</th><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td></tr>
+                <tr><th scope="row">Firefox: text box on a page</th><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td></tr>
+                <tr><th scope="row">Firefox: address bar</th><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td><td class="yes"><svg class="i" aria-label="Passed"><use href="#i-check" /></svg></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="fine">Tested on Windows 11 23H2 with AutoHotkey 1.1.37.02, Chrome 155, Firefox 158 and Microsoft 365 Apps 16.0. Office is marked n/a for English because Word, Excel and PowerPoint ship their own AutoCorrect list that overlaps the English fixes, so a pass would not prove which tool did it. Runs that were interrupted by other windows taking focus were repeated.</p>
+          <div class="limits">
+            <h4>Honest limits</h4>
+            <ul>
+              <li><b>Not tested:</b> Notepad, Outlook, desktop chat apps, code editors, games. They are ordinary Windows text boxes, so they should work, but we have not checked each one. <code>tools/compat</code> lets you test yours.</li>
+              <li>A program running <b>as administrator</b> ignores a normal script. Run the script as administrator too (right-click, Run as administrator).</li>
+              <li>Games with anti-cheat, remote desktop windows and some secure input fields can block scripts that type for you.</li>
+              <li><b>Hindi</b> needs a keyboard that types Devanagari letter by letter, such as Windows' Hindi Traditional (INSCRIPT). Phonetic tools that compose whole words first were not tested.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- how it works -->
+    <section class="section band" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">How it works</p>
+          <h2 id="how-title">One rule per typo. Thousands of rules.</h2>
+          <p class="sub">Each script is a plain text file for AutoHotkey, a free Windows tool that can watch the keyboard. A rule is a single line, called a hotstring.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><span class="n">1</span><h3>You type</h3><p>The script sits in the tray and sees each key you press, in any program.</p>
+            <div class="keys"><span class="key">n</span><span class="key">h</span><span class="key">i</span></div></article>
+          <article class="step"><span class="n">2</span><h3>You end the word</h3><p>Space, Enter or punctuation (and the Hindi danda <span class="hi">।</span>) tells it the word is finished. It checks the word against its list.</p>
+            <div class="keys"><span class="key">Space</span><span class="arrow">→</span><code>::nhi::nahi</code></div></article>
+          <article class="step"><span class="n">3</span><h3>It fixes it</h3><p>It erases the typo and types the right word, keeping your capitals: <code>Nhi</code> becomes <code>Nahi</code>, <code>NHI</code> becomes <code>NAHI</code>.</p>
+            <div class="keys"><span class="out">nahi</span></div></article>
+        </div>
+
+        <div class="under-hood">
+          <div class="panel">
+            <h3>Safe by design</h3>
+            <ul>
+              <li>Only words that are clearly misspelled are fixed. Spellings people really use (<code>kyu</code> and <code>kyun</code>, <code>acha</code> and <code>accha</code>) are left alone.</li>
+              <li>Ambiguous or risky ones are in a commented-out block at the end of each file. Switch on the ones you agree with.</li>
+              <li>The scripts make no network calls and store nothing. You can read every line.</li>
+              <li>Delete one line to remove a fix you don't like. Press a hotkey on a selected word to add your own.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>How the Hinglish list was built</h3>
+            <p>Hinglish has no official spelling, so the list is generated from about 11,700 known words, then filtered hard. A fix is thrown away if it would turn a real word into another, is an English word, could mean two things, or clashes with the English script.</p>
+            <div class="stats">
+              <div class="stat"><b>34,377</b><span>Hinglish fixes on</span></div>
+              <div class="stat"><b>3,762</b><span>optional, off</span></div>
+              <div class="stat"><b>315 / 315</b><span>live typing test</span></div>
+            </div>
+            <p style="margin-top:16px">On words the generator never saw, 3 in about 200 rare words were changed, all alternate spellings. That's why every fix is one line you can delete.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- try it -->
+    <section class="section" id="try" aria-labelledby="try-title">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="kicker">Try it</p>
+          <h2 id="try-title">Type a typo, press space.</h2>
+          <p class="sub">A small browser version of the same idea. The real scripts work in your programs and know thousands more.</p>
+        </div>
+        <div class="try">
+          <label for="tryBox">Type here, for example <code>nhi</code>, <code>teh</code> or <span class="hi"><code>नही</code></span>, then press space.</label>
+          <textarea id="tryBox" rows="4" spellcheck="false" autocomplete="off" autocapitalize="off" placeholder="Mjhe bht bhook lgi hai, send teh report tommorow..."></textarea>
+          <div class="try-row"><span class="lead">Quick tries:</span>
+            <button class="chipbtn" type="button" data-fill="Mjhe bht bhook lgi ">Mjhe bht bhook lgi</button>
+            <button class="chipbtn" type="button" data-fill="Send teh report tommorow ">Send teh report tommorow</button>
+            <button class="chipbtn hi" type="button" data-fill="आज मेंने उसे नही ">आज मेंने उसे नही</button>
+            <button class="chipbtn" type="button" id="tryClear">Clear</button>
+          </div>
+          <p class="try-status" id="tryStatus" aria-live="polite">Waiting for a typo…</p>
+          <p class="try-note">This demo knows about 40 words. The scripts know 39,000+.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- install -->
+    <section class="section band" id="install" aria-labelledby="install-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Install</p>
+          <h2 id="install-title">Three minutes, no installer for the scripts.</h2>
+        </div>
+        <div class="install">
+          <ol>
+            <li><h3>Get AutoHotkey v1.1</h3><p>Download it free from <a href="https://www.autohotkey.com/">autohotkey.com</a> and choose <b>v1.1</b>. The scripts are written for v1.1, not v2.</p></li>
+            <li><h3>Download the scripts</h3><p><a href="https://github.com/Manish-404/autocorrect-global/archive/refs/heads/main.zip">Download the ZIP</a> and unzip it anywhere.</p></li>
+            <li><h3>Double-click what you want</h3><p>Run one, two or all three. A green <b>H</b> appears in the tray. Each script only touches its own language.</p></li>
+            <li><h3>Start with Windows (optional)</h3><p>Press <b>Win + R</b>, type <code>shell:startup</code>, and drop a shortcut to each script in that folder.</p></li>
+            <li><h3>For Hindi: add a Hindi keyboard</h3><p>Settings, Time &amp; language, add <b>Hindi</b>, then add the <b>Hindi Traditional</b> keyboard. Keep the Hindi file saved as <b>UTF-8 with BOM</b>.</p></li>
+          </ol>
+          <div class="three">
+            <div class="file"><div><b>AutoCorrect.ahk</b><span>English · about 4,700 fixes</span></div><span class="hk">Win + H</span></div>
+            <div class="file"><div><b>AutoCorrectHindi.ahk</b><span>Devanagari · about 320 fixes</span></div><span class="hk">Win + Shift + H</span></div>
+            <div class="file"><div><b>AutoCorrectHinglish.ahk</b><span>Hindi in English letters · 34,377 fixes</span></div><span class="hk">Win + Alt + H</span></div>
+            <p class="fine" style="margin:6px 4px 0">The hotkey adds your own correction for the selected word. Press it, type the right spelling, done: it is saved at the bottom of that script and takes effect at once.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- faq -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="section-head center"><p class="kicker">Questions</p><h2 id="faq-title">Good to know.</h2></div>
+        <div class="faq">
+          <details><summary>Does it send what I type anywhere?</summary><p>No. The scripts contain no network code and keep nothing. They only compare the word you just typed with their list, on your own PC. They are short, plain text files, so you can check.</p></details>
+          <details><summary>What if it changes a word I meant?</summary><p>Open the script in any text editor and delete that one line (use search to find it), then reload the script. Names and rare words are the usual cause. In our test on words the Hinglish generator had never seen, 3 of about 200 rare words were changed, all of them alternate spellings.</p></details>
+          <details><summary>Why one script per language?</summary><p>So each stays small, and so you only run what you need. They are built so they never both rewrite the same word: the Hinglish list drops anything the English script would also change.</p></details>
+          <details><summary>Does it work on Mac, Linux or my phone?</summary><p>No. It needs Windows and AutoHotkey v1.1. The idea would port, but this project does not.</p></details>
+          <details><summary>Can I use AutoHotkey v2?</summary><p>Not as is. The scripts use v1.1 syntax, so install v1.1 (you can have both versions side by side).</p></details>
+          <details><summary>I also type Marathi.</summary><p>Some Hindi fixes (like <span class="hi">शक्ती → शक्ति</span>) are correct in Marathi. Delete those lines from the Hindi script, or leave it off.</p></details>
+          <details><summary>Will my antivirus complain?</summary><p>Some security tools are cautious about any script that watches the keyboard, even a harmless one. AutoHotkey is a well-known tool and these scripts are readable text, but if yours objects, add an exception for the folder.</p></details>
+          <details><summary>How do I report a wrong fix or add words?</summary><p>Open an issue or a pull request on GitHub. The Hinglish word lists live in <code>tools/hinglish/lex</code>, and one command rebuilds the file.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- closing call to action -->
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="wrap">
+        <h2 id="closing-title">If it saves you one embarrassing typo, star it.</h2>
+        <p>AutoCorrect Global is free and open source. A star on GitHub helps other English, Hindi and Hinglish typists find it.</p>
+        <div class="cta">
+          <a class="btn btn-star" href="https://github.com/Manish-404/autocorrect-global"><svg class="i i-fill star" aria-hidden="true"><use href="#i-star" /></svg>Star on GitHub</a>
+          <a class="btn btn-primary" href="https://github.com/Manish-404/autocorrect-global/archive/refs/heads/main.zip"><svg class="i" aria-hidden="true"><use href="#i-download" /></svg>Download ZIP</a>
+        </div>
+        <p class="star-note">Already using it? Tell a friend who types Hinglish.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="foot-top">
+        <a class="brand" href="#top"><svg aria-hidden="true"><use href="#logo" /></svg><span>AutoCorrect Global</span></a>
+        <nav class="foot-links" aria-label="Project links">
+          <a href="https://github.com/Manish-404/autocorrect-global">GitHub</a>
+          <a href="https://github.com/Manish-404/autocorrect-global/issues">Issues</a>
+          <a href="https://github.com/Manish-404/autocorrect-global/blob/main/LICENSE">MIT licence</a>
+          <a href="https://github.com/Manish-404/autocorrect-global/archive/refs/heads/main.zip">Download</a>
+        </nav>
+      </div>
+      <p class="legal">Hindi and Hinglish scripts, the generator and this page are MIT licensed. <code>AutoCorrect.ahk</code> is the long-standing AutoHotkey AutoCorrect script (Jim Biancolo, 2006), built on Wikipedia's lists of common misspellings (CC BY-SA 3.0) and other sources named in its header, included as it was. AutoHotkey is a separate free project. Microsoft, Word, Excel, PowerPoint, Chrome and Firefox are trademarks of their owners and are named only to say where this was tested.</p>
+      <p class="legal">No cookies, analytics or third-party requests on this page. Promo video made with <a href="https://github.com/latent-spaces/brag">brag</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+  (() => {
+    'use strict';
+    const $ = (id) => document.getElementById(id);
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+
+    /* ---------- the hero demo: the same typing-and-fixing the scripts do, replayed ---------- */
+    const EX = [
+      { lang: 'English', tokens: [['Send', 'Send', ' '], ['teh', 'the', ' '], ['report', 'report', ' '], ['tommorow', 'tomorrow', '']] },
+      { lang: 'Hinglish', tokens: [['Mjhe', 'Mujhe', ' '], ['bht', 'bahut', ' '], ['bhook', 'bhook', ' '], ['lgi', 'lagi', ' '], ['hai', 'hai', '']] },
+      { lang: 'हिंदी', hi: true, tokens: [['आज', 'आज', ' '], ['मेंने', 'मैंने', ' '], ['उसे', 'उसे', ' '], ['नही', 'नहीं', ' '], ['देखा', 'देखा', '']] },
+      { lang: 'Hinglish', tokens: [['Bdhiya', 'Badhiya', ' '], ['video', 'video', ', '], ['awaaz', 'awaaz', ' '], ['thdi', 'thodi', ' '], ['dhimi', 'dhimi', '']] },
+    ];
+    const CPS = 11, HOLD = 2.4, START = 0.5;
+    EX.forEach((ex) => {          // when each letter is typed (a steady, human pace)
+      let t = START;
+      ex.toks = ex.tokens.map(([typed, fixed, end]) => {
+        const chars = Array.from(typed).map(() => (t += 1 / CPS));
+        const ends = Array.from(end).map(() => (t += 1 / CPS));
+        const tFix = typed !== fixed && ends.length ? ends[0] + 0.03 : null;
+        return { typed, fixed, end, chars, ends, tFix };
+      });
+      ex.done = t;
+      ex.len = t + HOLD;
+      ex.final = ex.toks.map((k) => k.fixed + k.end).join('');
+      ex.fixes = ex.toks.filter((k) => k.tFix !== null);
+    });
+    const TOTAL = EX.reduce((s, e) => s + e.len, 0);
+    const demoText = $('demoText'), demoLang = $('demoLang'), demoNote = $('demoNote'), demoBadge = $('demoBadge'), dots = [...$('demoDots').children];
+
+    function paint(ex, t) {
+      let html = '';
+      for (const k of ex.toks) {
+        const n = k.chars.filter((x) => x <= t).length;
+        const e = k.ends.filter((x) => x <= t).length;
+        if (!n && !e) continue;
+        const fixedNow = k.tFix !== null && t >= k.tFix;
+        const word = fixedNow ? k.fixed : Array.from(k.typed).slice(0, n).join('');
+        let attr = 'class="w"';
+        if (fixedNow) {
+          const a = Math.exp(-(t - k.tFix) / 0.5);
+          attr = `class="w" style="background:rgba(20,184,138,${(0.3 * a).toFixed(3)});box-shadow:0 0 0 ${(4 * a).toFixed(1)}px rgba(20,184,138,${(0.16 * a).toFixed(3)})"`;
+        } else if (k.typed !== k.fixed && n >= 2) attr = 'class="w typo"';
+        html += `<span ${attr}>${esc(word)}</span>${esc(Array.from(k.end).slice(0, e).join(''))}`;
+      }
+      demoText.innerHTML = html + (t < ex.done + 1.2 ? '<span class="caret"></span>' : '');
+      const done = ex.fixes.filter((k) => t >= k.tFix);
+      if (done.length) {
+        const last = done[done.length - 1];
+        demoNote.innerHTML = `<b>${esc(last.typed)}</b> → <b>${esc(last.fixed)}</b>` + (done.length > 1 ? `  ·  ${done.length} fixes` : '');
+        demoBadge.style.visibility = 'visible';
+        demoBadge.textContent = `✓ ${done.length} fixed`;
+        demoBadge.style.transform = `scale(${(1 + 0.2 * Math.exp(-(t - last.tFix) / 0.15)).toFixed(3)})`;
+      } else {
+        demoNote.textContent = t < ex.done ? 'Type, then press space…' : '';
+        demoBadge.style.visibility = 'hidden';
+      }
+    }
+    function setExample(i) {
+      const ex = EX[i];
+      demoLang.textContent = ex.lang;
+      demoLang.classList.toggle('hi', !!ex.hi);
+      demoText.classList.toggle('hi', !!ex.hi);
+      dots.forEach((d, j) => d.classList.toggle('on', j === i));
+    }
+    if (reduce) {                     // no animation: show the finished result of the first example
+      setExample(0);
+      demoText.textContent = EX[0].final;
+      demoNote.innerHTML = '<b>teh</b> → <b>the</b>  ·  <b>tommorow</b> → <b>tomorrow</b>';
+    } else {
+      let t0 = performance.now(), shown = -1;
+      const tick = (now) => {
+        let t = ((now - t0) / 1000) % TOTAL, i = 0;
+        while (t >= EX[i].len) { t -= EX[i].len; i++; }
+        if (i !== shown) { shown = i; setExample(i); }
+        paint(EX[i], t);
+        requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }
+
+    /* ---------- try it: a small version of the same idea, running in the page ---------- */
+    const DICT = {
+      // Hinglish
+      nhi: 'nahi', mjhe: 'mujhe', bht: 'bahut', lgi: 'lagi', jldi: 'jaldi', krna: 'karna', rha: 'raha', kuhc: 'kuch', bdhiya: 'badhiya',
+      lekn: 'lekin', thdi: 'thodi', shyd: 'shayad', ghr: 'ghar', hmara: 'hamara', hmari: 'hamari', kbhi: 'kabhi', smjh: 'samajh', btao: 'batao', kyunk: 'kyunki',
+      // English
+      teh: 'the', adn: 'and', tommorow: 'tomorrow', definately: 'definitely', becuase: 'because', beleive: 'believe', thier: 'their',
+      freind: 'friend', wierd: 'weird', occured: 'occurred',
+      // हिंदी
+      'नही': 'नहीं', 'मेंने': 'मैंने', 'क्योकि': 'क्योंकि', 'तुम्हे': 'तुम्हें', 'एसा': 'ऐसा', 'केसे': 'कैसे', 'शक्ती': 'शक्ति', 'परिस्थिती': 'परिस्थिति', 'उदहारण': 'उदाहरण',
+    };
+    const ENDS = new Set([' ', '\n', '\t', '.', ',', '?', '!', ';', ':', '(', ')', '"', "'", '।', '॥']);
+    const box = $('tryBox'), status = $('tryStatus');
+    const conform = (typed, fixed) => {
+      if (typed.length > 1 && typed === typed.toUpperCase() && typed !== typed.toLowerCase()) return fixed.toUpperCase();
+      if (typed[0] !== typed[0].toLowerCase() && typed.slice(1) === typed.slice(1).toLowerCase()) return fixed[0].toUpperCase() + fixed.slice(1);
+      return fixed;
+    };
+    box.addEventListener('input', (e) => {
+      if (e.isComposing || !e.data || e.data.length !== 1 || !ENDS.has(e.data)) return;
+      const pos = box.selectionStart;
+      const before = box.value.slice(0, pos - 1);
+      const m = before.match(/[^\s.,?!;:()"'।॥]+$/);
+      if (!m) return;
+      const typed = m[0].normalize('NFC');
+      const fixed = DICT[typed.toLowerCase()] || DICT[typed];
+      if (!fixed) return;
+      const out = conform(typed, fixed);
+      box.value = before.slice(0, before.length - m[0].length) + out + box.value.slice(pos - 1);
+      const caret = before.length - m[0].length + out.length + 1;
+      box.setSelectionRange(caret, caret);
+      status.innerHTML = `Fixed <b>${esc(typed)}</b> → <b>${esc(out)}</b>`;
+    });
+    document.querySelectorAll('[data-fill]').forEach((b) => b.addEventListener('click', () => {
+      box.focus();
+      box.value = '';
+      let i = 0;
+      const text = b.dataset.fill;
+      const next = () => {           // type it character by character through the same input path as a keyboard
+        if (i >= text.length) return;
+        const ch = text[i++];
+        const start = box.selectionStart;
+        box.setRangeText(ch, start, start, 'end');
+        box.dispatchEvent(new InputEvent('input', { data: ch, inputType: 'insertText', bubbles: true }));
+        setTimeout(next, reduce ? 0 : 55);
+      };
+      next();
+    }));
+    $('tryClear').addEventListener('click', () => { box.value = ''; status.textContent = 'Waiting for a typo…'; box.focus(); });
+
+    /* ---------- light / dark toggle: follows the device until the visitor picks the other theme ---------- */
+    const themeButton = $('themeToggle');
+    const root = document.documentElement;
+    const device = window.matchMedia('(prefers-color-scheme: dark)');
+    const themeColors = [...document.querySelectorAll('meta[name="theme-color"]')];
+    const deviceTheme = () => (device.matches ? 'dark' : 'light');
+    const currentTheme = () => root.dataset.theme || deviceTheme();
+    const showTheme = () => {
+      const theme = currentTheme();
+      const label = `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`;
+      themeButton.setAttribute('aria-label', label);
+      themeButton.title = label;
+      themeColors.forEach((meta) => meta.setAttribute('content', theme === 'dark' ? '#0c0e1b' : '#fbfaf8'));
+    };
+    themeButton.addEventListener('click', () => {
+      const next = currentTheme() === 'dark' ? 'light' : 'dark';
+      const followDevice = next === deviceTheme();
+      if (followDevice) delete root.dataset.theme; else root.dataset.theme = next;
+      try { if (followDevice) localStorage.removeItem('acg-theme'); else localStorage.setItem('acg-theme', next); } catch { /* storage blocked: lasts for this visit */ }
+      showTheme();
+    });
+    device.addEventListener('change', showTheme);
+    showTheme();
+  })();
+  </script>
+</body>
+</html>

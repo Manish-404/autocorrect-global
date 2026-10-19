@@ -1,0 +1,18 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>waiting</title>
+<style>body{font:20px sans-serif;margin:24px}input{font:inherit;width:90vw}</style>
+<!-- Acts like a chat box or a search bar: Enter sends what is in the box. The window title lists every message sent. -->
+<input id="q" autofocus spellcheck="false" autocomplete="off">
+<script>
+const q = document.getElementById('q');
+const sent = [];
+q.focus();
+q.addEventListener('keydown', function (e) {
+  if (e.key !== 'Enter') return;
+  e.preventDefault();
+  sent.push(q.value);
+  q.value = '';
+  document.title = 'SENT ' + sent.length + ': ' + sent.join(' | ');
+});
+</script>

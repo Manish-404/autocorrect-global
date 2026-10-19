@@ -1,0 +1,21 @@
+# Keep the scripts exactly as written: Windows line endings, UTF-8 with BOM (the Hindi file needs the BOM)
+*.ahk text eol=crlf
+*.ps1 text eol=crlf
+*.py  text eol=lf
+*.md  text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.svg text eol=lf
+*.txt text eol=lf
+
+# Media is stored as is
+*.png binary
+*.jpg binary
+*.gif binary
+*.mp4 binary
+
+# "Download ZIP" gets just what you need to run the scripts, not the website or the tools
+/docs export-ignore
+/tools export-ignore
+/.gitignore export-ignore
+/.gitattributes export-ignore

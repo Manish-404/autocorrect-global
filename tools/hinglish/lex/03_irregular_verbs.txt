@@ -1,0 +1,107 @@
+# Irregular and auxiliary verbs, written out in full. Regular verbs are generated from verbs.txt.
+# Spellings with a single a (jana) and with aa (jaana) are both listed, so neither gets corrected.
+
+@ Verb: karna
+karna karta karti karte karo karoge karogi karunga karungi karega karegi karenge karengi
+kare karen kariye kijiye kar karke karkar karwana karwata karwati karwate karwao karwaya karwayi karwaye
+karwayega karwayenge kiya kiye
+karun | karoon karu
+karunga | karoonga karuga
+karungi | karoongi karugi
+kariye | karie kariyega
+kijiye | kijie kijiyega
+kiya | kia
+kiye | kiyey
+karne karni kari karein
+
+@ Verb: dena
+dena deta deti dete doge dogi dunga dungi dega degi denge dengi den dijiye diya diye deke dekar
+dilana dilwana dilao dilaya dilata
+dunga | doonga duga
+dungi | doongi dugi
+dijiye | dijie dijiyega
+diya | dia
+dene deni
+
+@ Verb: lena
+lena leta leti lete loge logi lunga lungi lega legi lenge lengi len lijiye liya liye leke lekar
+lunga | loonga luga
+lungi | loongi lugi
+lijiye | lijie lijiyega
+liya | lia
+lene leni
+
+@ Verb: jana
+jana jata jati jate jao jaoge jaogi jaunga jaungi jayega jayegi jayenge jayengi jaye jayen jaiye
+gaya gayi gaye jakar jake jane jaun
+jaana jaata jaati jaate jaao jaaoge jaaogi jaaunga jaaungi jaayega jaayegi jaayenge jaayengi
+jaaye jaayen jaaiye jaakar jaake jaane
+gayi | gai
+jayega | jaega
+jayegi | jaegi
+jayenge | jaenge
+jaye | jae
+
+@ Verb: aana
+aana aata aati aate aao aaoge aaogi aaun aaunga aaungi aayega aayegi aayenge aayengi aaye aayen
+aaiye aaya aayi aakar aake aane aani
+aayega | ayega aaega
+aayegi | ayegi aaegi
+aayenge | ayenge aaenge
+aayi | ayi aai
+aaunga | aunga
+aaungi | aungi
+aaoge | aoge
+aaogi | aogi
+
+@ Verb: hona
+hona hota hoti hote hone honi hoon hoga hogi honge hongi hoge hua hui hue hokar hoke
+hoga | hogaa
+hua | huwa huva
+hui | huwi
+hue | huwe
+hokar | hoker
+
+@ Verb: peena
+peena peeta peeti peete piyo piyoge piyogi piyunga piyungi piyega piyegi piyenge piyengi piye
+piya piyi pikar pike peejiye
+peena | pina
+piyega | pyega
+
+@ Verb: khana
+khana khata khati khate khao khaoge khaogi khaun khaunga khaungi khayega khayegi khayenge khayengi
+khaye khayen khaiye khaya khayi khakar khake khane khani
+khaana khaata khaati khaate khaao khaaoge khaaogi khaaun khaaunga khaaungi khaayega khaayegi
+khaayenge khaayengi khaaye khaayen khaaiye khaaya khaayi khaakar khaake khaane khaani
+
+@ Verb: lana
+lana lata lati late lao laoge laogi laun launga laungi layega layegi layenge layengi laye layen
+laiye laya layi lakar lake lane lani
+laana laata laati laate laao laaoge laaogi laaun laaunga laaungi laayega laayegi laayenge
+laaye laaiye laaya laayi laakar laake laane
+
+@ Verb: paana
+paana paata paati paate paao paaoge paaogi paaunga paaungi paayega paayegi paayenge paaya
+paayi paaye paakar paake paane
+paya payi paye payega payegi payenge paunga paungi paoge paogi pakar pake
+
+@ Verb: sakna and chahna
+sakta sakti sakte sakoge sakogi sakunga sakungi sakega sakegi sakenge sakengi saka saki sake sakun sakein
+chahiye chahta chahti chahte chahunga chahungi chahenge chahega chahegi chahoge chahogi chaha chahi chahe
+chahna chahne chahni
+chahiye | chahie chaiye chahiyen
+chuka chuki chuke
+
+@ Verb: rehna
+rahna rehna rahta rahti rahte rehta rehti rehte raha rahi rahe rahega rahegi rahenge rahengi
+rahoge rahogi rahunga rahungi rahun rahen rahiye rahiyega rehkar rahkar rahne rehne
+rahna | rhna
+
+@ Verb: kehna
+kehna kahna kehta kehti kehte kahta kahti kahte kaha kahi kahe kaho kahoge kahogi kahunga kahungi
+kahega kahegi kahenge kahengi kehkar kahkar kehke kahke kehne kahne kehti
+
+@ Verb: bolna and others with regular stems but irregular spelling
+bola boli bole bolo bolna bolta bolti bolte bolunga bolega bolegi bolenge
+sunna suna suni sune suno sunta sunti sunte sununga sunega sunegi sunenge
+dekhna dekha dekhi dekhe dekho dekhta dekhti dekhte dekhunga dekhega dekhegi dekhenge

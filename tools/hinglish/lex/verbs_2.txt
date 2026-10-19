@@ -1,0 +1,15 @@
+# More regular verb stems (see verbs.txt for the format).
+
+# --- consonant-final, with typo coverage ---
+*daal nikaal paal pehchaan phir sah sambhaal thaam taul utaar ghoom bandh chheen dhul khul ghul simat
+*bhatak jhoom mar pad bik jam jaag khich khinch machal mit mud ud bhij dub dukh chheenk chhid sinch
+*jhuk thak chhup chipak ladkhad ubhar/ubhr pighal/pighl lipat/lipt gunj sikud rang
+
+# --- stems ending in a, with typo coverage ---
+*daba duba bhula jita kata luta mita phaila pighla sata saja thama uga bichha nacha khela dauda
+*padha likha chalaa? hansa rula
+
+# --- valid words only ---
+sunn gher/gher dhak phail ghus daro/daro tapak lut chamak damak sook tikk sar sarak/sark silaa
+umad/umd ukhad/ukhd pis tap tan rat bo mod ghisat/ghist ladh gaad gaadh bhidh tanak? kaat bun
+bunn jod/jod chun/chun kuch/kuch kud/kud phoot/phoot chhut/chhut ruth/ruth rooth/rooth

@@ -1,0 +1,64 @@
+# Words that change their ending (bada / badi / bade, ladka / ladke / ladkon ...).
+# Format  kind: word word ...   See INFLECT in build.py for what each kind produces.
+
+# adjectives in -a  (-> -i, -e)
+adj: accha bura bada chhota naya purana kala sasta mehenga thanda meetha teekha khatta kadwa taaza sookha
+adj: geela ganda lamba patla mota ooncha neecha pyara sachcha jhootha bhola akela adhoora poora andha
+adj: bahra langda gunga tedha seedha halka dheema ujla maila chikna nanha sunehra khara kora gora saanwla
+adj: kaala peela neela hara bhura jaisa waisa aisa kaisa itna utna kitna jitna titna
+adj: mara bigda toota phata bhoola khoya soya jaaga thaka haara jeeta paaya
+adj: patla chauda sankra gehra uthla ghana maindha nanga bhookha pyaasa udaas?
+adj: nikamma nakara sustakar? mashhoor?
+adj: pagla paagal? deewana mastana shayana bechara
+adj: bhaiyya? dilwala dhanwala paisewala gaadiwala
+adj: aadha pura? dugna tigna chauthaa?
+
+# masculine nouns in -a  (-> -e, -on)
+ma: ladka beta pota nana dada chacha mama bhatija bhanja kutta ghoda gadha bakra tota kauwa pankha dibba
+ma: thaila kapda sheesha aaina paisa nashta rasta sapna darwaza mela tamasha jhanda dhaga chasma khilona
+ma: gola chhata bachcha dulha sikka ghunghroo? kamra rumaal? bhaalu? kaajal? taara chaand? sitaara
+ma: pyaala gubbara chhakka chauka phanda? panna? gamla batua thela dhela tukda khaata nishaana
+ma: nakshaa? zamaana afsaana tarana nagma? mazaa? jalwa jhagda waada iraada irada fayda faayda nuksaan?
+ma: ghosla pinjra pahiya diya gattha dabba chhatta jhonka thappad tamacha? ghoonsa? lifafa saaman?
+ma: kinara kamra ujaala andhera savera dera basera hausla faisla silsila rishta mudda masla maamla
+ma: chehra pehra sehra gehra? chaska chashma nakshaa naqsha? rukka chitta tohfa? tamga? sabaq? qissa kissa
+ma: kaanta daaga dhabba pahada?  baccha ladla? gaana? afsana? halwa pakwaan? pulao? pakoda? samosa?
+ma: kaaryakram? vichaar? bhaashan? sandesh?
+
+# feminine nouns in -i  (-> -iyan, -iyon)
+fi: ladki beti billi bakri murgi gaadi topi kursi rassi ghadi lakdi chitthi chhutti kahani nadi roti
+fi: mithai dawai kheti sabzi daali saari kunji sui churi kainchi mitti mehndi rangoli ghanti khidki seedhi
+fi: dhoti putli roshni garmi sardi zindagi khushi dosti dushmani azaadi aazaadi bijli pagdi pahari
+fi: tipaayi? sazaa? shaadi laathi patti jodi jaati chaabi kaanchi thaili thaali? gaali gali
+fi: chaadi? mooli nimboo? imli? ladai larai kamai padhai likhai safai sunwai? hasi hansi rulai
+fi: baarish? bhookh? tasveeri? lorie? khichdi kheer? pakodi? jalebi barfi laddu? tikki
+fi: dilli? kothi kothri?  bastee basti basti hasti?
+
+# feminine nouns in -iya  (-> -iyan, -iyon)
+fiya: chidiya gudiya guriya bitiya
+
+# feminine nouns ending in a consonant  (-> -ein, -on)
+fc: baat raat cheez kitaab aurat aankh yaad awaaz zubaan baraat daawat mehnat taakat hasrat kasam umeed
+fc: nazar nigaah soch saans sadak tasveer tareef tarah shakl rooh raah rasm chaal cheekh bhookh pyaas
+fc: aadat chot dard? khabar sazaa? fasal sabha? kasar tamanna? aarzoo? khwaahish dawaat? mulaqaat
+fc: shikaayat sifarish gawaahi? izzat shohrat daulat himmat shiddat nafrat mohabbat chaahat hukoomat
+fc: sarkar adaalat riyasat ibadat rivayat? tehzeeb tarteeb tarkeeb taleem tameez taqdeer tasalli
+fc: duniya? zameen aasmaan? sharm sharaarat shararat? kismat qeemat keemat tabiyat sehat siffat
+fc: mushkil musibat mehfil manzil mulaqat mazdoor? pehchaan pahchaan parvarish parwaah? farmaaish
+fc: dastak dukaan dikkat daud? deewar deewaar dhoop? ghaas? jaan jeeb jeebh khaal khaansi khaas?
+fc: kamar kalam kaaj? lagan lahar lakeer lakshman? lau? maut? machhli madad? marz? mitti? mulaayam?
+fc: nind neend nigaah nazm nakal naukri? nadi? nasl? pagdandi? parchhai pehal pareshaani? paalki
+fc: pyali? raftaar raunak rail? ret? rooh? roz? saaz saaza? sabzi? safar? sahi? saugaat salaah
+fc: sarhad seedhi? seerat shikast shaan shart shiksha? sooraj? surat sukoon? tadbeer tamasha?
+fc: thakaan tooti? udaan umar umang urdu? vajah wajah wafa? zimmedaari? zindagi? zulf
+
+# feminine nouns in -a  (-> -yein, -on)
+fa: hawa bhasha prarthana pariksha sabha shiksha raksha sazaa saza dua ichha iccha aasha asha vyatha
+fa: kriya kala? katha kavita? kripa daya lajja ghatna yojana sanstha sabhyata manyata
+
+# masculine nouns ending in a consonant  (-> -on)
+mc: ghar dost desh shehar gaon bazaar log insaan mausam mulk kaam naam din pal saal pair haath
+mc: kaan naak munh daant baal dil dimaag chehra? jhoomar? nagar kisaan mazdoor dukaandaar sipahi
+mc: afsar naukar malik padosi ladaaku? khiladi bachpan jawaan buzurg musafir shayar kavi
+mc: parinda parind? janwar jaanwar pahaad pahad? ped patta? phool phal? pathar jungle samundar
+mc: sher bandar kutte? ullu? pujari pandit

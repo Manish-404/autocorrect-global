@@ -1,0 +1,58 @@
+# Short and common Hindi/Hinglish words that must never be "corrected" or produced by a correction.
+# Many are one letter away from longer words (kam/kaam, baar/bahar, paar/pyaar ...).
+
+@ Valid short words
+=aag =aam =aap =aaj =aur =ab =agar =aisa =ant =anda =aana =aata =aate =aati =apna =apni =apne
+=arab =ajab =akal =alag =aaya =aaye =aayi =aath =aadh =aata =aaya
+=baat =baar =baal =baap =baba =baad =baagh =baja =baje =bajna =bakra =bal =ban =band =bank =bas
+=bata =bati =bhai =bhag =bhar =bhat =bhav =bhay =bhed =bhej =bhid =bhoj =bhool =bhoot =bhut =bij
+=bol =boli =bola =bole =bolo =boond =bua =buri =bura =bure =beech =beta =beti =behen =bina =billi
+=chaar =chaal =chaand =chal =chala =chali =chalo =chalu =chana =chane =chat =chor =chot =chup
+=chura =chuka =chuke =chuki =chhat =chhod =chhote =chhoti =chhota
+=daal =daam =daan =daant =dada =dadi =dahi =dal =dam =dar =darr =das =daud =dawa =dekh =dena =desh
+=dhan =dhaar =dhaan =dhaba =dhoop =dhool =dhuan =dhyan =din =dil =diya =diye =do =door =dost
+=dukh =dulha =dum =dur
+=gaadi =gaana =gaane =gaay =gala =gali =gaon =gaya =gaye =gayi =garam =garmi =gaya =ghar =ghat
+=ghata =ghati =ghanta =ghoda =ghum =ghus =gir =gira =girna =gobhi =gola =gora =gori =guru =gussa
+=haal =haan =haar =haath =hans =hansi =hara =hawa =haq =hona =hota =hoti =hote =hua =hui =hue
+=hum =humare =hindi =hindu
+=jaa =jaan =jaana =jab =jad =jagah =jal =jala =jali =jan =janam =jaao =jata =jati =jate =jeet
+=jhoot =jhooth =jod =jodi =jor =joota =jungle =jyada
+=kaam =kaan =kaal =kab =kabhi =kaisa =kaise =kal =kala =kali =kam =kar =kare =karo =karna =kaun
+=kaha =kahan =kahi =kahin =kahani =kanha =kapda =kapde =kaun =kaan =kaat =khaa =khaana =khan
+=khana =khata =khati =khate =khaas =khel =khoon =khud =khush =khoob =khol =kho =kitab =kitna
+=kitne =kitni =kisi =koi =koyi =kuch =kuchh =kya =kyun =kyu
+=laal =laga =lagi =lage =lagna =lakh =lal =lana =lao =lag =lada =ladka =ladki =laut =lena =lo
+=maa =maan =maal =maam =maar =maara =maare =maari =maat =maine =mann =man =mat =mere =meri =mera
+=mein =mil =mila =mili =mile =milo =milna =mod =mohan =mujhe =muh =munh =mukh =mausam
+=naam =naak =nahi =nahin =naya =nayi =naye =nal =nam =nana =nani =nand =nau =neend =nind =neeche
+=nikal =nikla =nikli =nikle =nishan =nirmal =niyam =niyat
+=oonch =oopar =oye
+=paas =pas =paar =paani =pani =paas =pad =padh =padha =padhi =padhe =pal =pan =par =para =pata
+=patta =patti =pati =patni =pehle =pehla =pehli =peeche =peena =peeta =pet =peth =pyaar =pyar =pyaas
+=phal =phir =phool =phoolon =pahar =pahad =pahaad =pair =paise =paisa =pakka =pakki =pata =patla
+=raah =raat =raja =rana =rani =rakh =rakha =rakhi =rakhe =raha =rahi =rahe =rang =rasta =raste
+=ravi =rona =roti =roz =roj =ruk =ruka =ruki =ruke =rupya =rupaye =rahat
+=saath =saal =saat =sab =sabhi =sach =safar =sahi =saaf =saaf =saaman =sama =samay =samjh =samaj
+=samaj =sang =sapna =sar =sara =sari =saath =sau =se =seedha =sehat =shaam =sham =shant =shaadi
+=sher =shor =sir =so =soch =soya =soyi =soye =sona =sone =suna =suni =sune =suno =sun =suraj
+=sukh =sunder =sundar =sasta =sabse =sabko =sabka =sabki
+=taan =taaj =taal =tab =tak =tal =tan =tang =tara =tare =taare =teen =tej =tera =teri =tere =tez
+=thaa =tha =thi =the =thak =thaka =thodi =thoda =thode =tod =toh =tum =tumhe =tab =tabhi
+=ubal =uda =udaas =udhar =ulta =umar =umeed =unka =unki =unke =unko =upar =uska =uski =uske =usko
+=uth =utha =uthi =uthe =uthna =utar
+=vaada =vaar =vidya =vyakti
+=waah =wada =wahi =waqt =waise =waisa =wala =wali =wale
+=yaad =yaar =yahan =yahin =yeh =yani =yug =yuvak
+=zaroor =zameen =zyada =zindagi
+
+@ Plural and oblique helpers
+=logon =doston =bachchon =gharon =baaton =raaton =dinon =salon =mahinon =aankhon =haathon
+
+@ Common words that are also English words (so they are never touched)
+=bar =bat =kar =par =pal =ram =rat =sir =tum =van =aid =doc =pen =pin =put =sat =sun =tan
+=mat =man =ban =bad =pad =mad =sad =dad =gap =lap =map =nap =rap =tap =sap =cap
+=hum =ham =hun =gun =sun =bun =fun =run =nun =pun =dun
+=pure =cure =sure =lure =dure
+=main =gate =gift =gold =game =girl =girls =goal
+=tera =tere =teri =pyar =kiya =kia =diya =liya =sahi =desi =deshi
