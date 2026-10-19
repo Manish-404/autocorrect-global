@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AutoCorrect Global · Typos fixed as you type in English, हिंदी and Hinglish</title>
-  <meta name="description" content="Free autocorrect for Windows that fixes typos as you type: English, Hindi (Devanagari) and Hinglish. 39,000+ ready-made fixes. Tested in Word, Excel, PowerPoint, Chrome, Firefox and WordPad.">
+  <meta name="description" content="Free, open-source autocorrect for Windows, built on AutoHotkey. Fixes typos as you type in English, Hindi (Devanagari) and Hinglish: 39,000+ ready-made fixes. Tested in Word, Excel, PowerPoint, Chrome, Firefox and WordPad.">
   <link rel="canonical" href="https://manish-404.github.io/autocorrect-global/">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbfaf8">
@@ -22,7 +22,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="AutoCorrect Global">
   <meta property="og:title" content="AutoCorrect Global · Typos fix themselves">
-  <meta property="og:description" content="Free autocorrect for Windows in English, हिंदी and Hinglish. Tested in Word, Excel, PowerPoint, Chrome and Firefox.">
+  <meta property="og:description" content="Free, open-source autocorrect for Windows in English, हिंदी and Hinglish, built on AutoHotkey. Tested in Word, Excel, PowerPoint, Chrome and Firefox.">
   <meta property="og:url" content="https://manish-404.github.io/autocorrect-global/">
   <meta property="og:image" content="https://manish-404.github.io/autocorrect-global/media/poster.jpg">
   <meta property="og:image:width" content="1920">
@@ -39,6 +39,7 @@
     "description": "System-wide autocorrect for Windows in English, Hindi (Devanagari) and Hinglish, built on AutoHotkey.",
     "url": "https://manish-404.github.io/autocorrect-global/",
     "downloadUrl": "https://github.com/Manish-404/autocorrect-global/archive/refs/heads/main.zip",
+    "isBasedOn": { "@type": "SoftwareApplication", "name": "AutoHotkey", "url": "https://www.autohotkey.com/" },
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   }
   </script>
@@ -165,6 +166,9 @@
     .facts { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 30px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 15px; }
     .facts li { display: inline-flex; align-items: center; gap: 8px; }
     .facts .i { color: var(--ok); width: 18px; height: 18px; }
+    .built { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 26px 0 0; color: var(--muted); font-size: 15px; }
+    .built > a { display: inline-flex; }
+    .built img { display: block; height: 40px; width: auto; }
 
     /* typing demo card */
     .demo { position: relative; border-radius: 24px; background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow-lg); overflow: hidden; }
@@ -190,6 +194,20 @@
     .video-frame { position: relative; border-radius: 22px; overflow: hidden; background: #0c0e1b; border: 1px solid var(--border-strong); box-shadow: var(--shadow-lg); aspect-ratio: 16 / 9; }
     .video-frame video { display: block; width: 100%; height: 100%; object-fit: cover; background: #0c0e1b; }
     .video-note { margin: 18px auto 0; max-width: 46em; text-align: center; color: var(--muted); font-size: 14.5px; }
+
+    /* ---------- works in all of them ---------- */
+    .works { padding: 64px 0 68px; }
+    .works h2 { text-align: center; }
+    .works-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px 30px; margin: 34px 0 0; padding: 0; list-style: none; }
+    .works-row li { display: flex; flex-direction: column; align-items: center; gap: 12px; width: 112px; font-weight: 600; font-size: 16px; text-align: center; }
+    .works-row img { display: block; width: 88px; height: 88px; border-radius: 20px; box-shadow: var(--shadow); }
+    @media (max-width: 520px) {   /* three tiles in the first row on a phone, two in the second */
+      .works-row { gap: 20px 14px; }
+      .works-row li { width: 100px; }
+      .works-row img { width: 80px; height: 80px; border-radius: 20px; }
+    }
+    .works-more { margin: 26px 0 0; text-align: center; color: var(--muted); font-size: 1.12rem; }
+    .works .works-note { margin: 18px auto 0; max-width: 46em; text-align: center; }
 
     /* ---------- where you can use it ---------- */
     .cases { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 18px; }
@@ -249,6 +267,11 @@
     .stat { flex: 1 1 130px; padding: 14px 16px; border-radius: 14px; background: var(--bg-alt); border: 1px solid var(--border); }
     .stat b { display: block; font-size: 1.6rem; letter-spacing: -0.02em; }
     .stat span { color: var(--muted); font-size: 13.5px; }
+    .panel.ahk { display: flex; align-items: center; gap: 30px; margin-top: 18px; }
+    .panel.ahk > a { flex: none; width: 190px; }
+    .panel.ahk img { display: block; width: 190px; height: auto; }
+    .panel.ahk p { margin: 10px 0 0; }
+    @media (max-width: 700px) { .panel.ahk { flex-direction: column; align-items: flex-start; gap: 18px; } }
 
     /* ---------- try it ---------- */
     .try { max-width: 860px; margin-inline: auto; padding: 26px; border-radius: 22px; background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow-lg); }
@@ -316,12 +339,7 @@
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
       <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffa24d" /><stop offset="1" stop-color="#f2600c" /></linearGradient>
-      <symbol id="logo" viewBox="0 0 128 128">
-        <rect width="128" height="128" rx="30" fill="url(#lg)" />
-        <path d="M28 96 L56 32 L84 96 M38 76 H74" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
-        <circle cx="94" cy="94" r="27" fill="#14b88a" stroke="#fff" stroke-width="6" />
-        <path d="M82 94 L91 103 L107 85" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
-      </symbol>
+      <symbol id="logo" viewBox="0 0 128 128"><rect width="128" height="128" rx="30" fill="url(#lg)"/><path d="M28 96 L56 32 L84 96 M38 76 H74" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(62 62) scale(3.5433)"><path fill="#fff" stroke="#fff" stroke-width="1.411" stroke-linejoin="round" d="M 5.2916666,0 H 14.2875 c 1.43105,0 2.64583,1.3297933 2.64583,2.6458333 v 8.9958327 c 0,2.68355 -2.608114,5.291668 -5.291664,5.291667 l -8.9958327,-3e-6 C 1.2786733,16.93333 0,15.70582 0,14.2875 V 5.2916666 C 0,2.6081066 2.6081066,0 5.2916666,0 Z"/><path fill="#448e3a" d="M 5.2916666,0 H 14.2875 c 1.43105,0 2.64583,1.3297933 2.64583,2.6458333 v 8.9958327 c 0,2.68355 -2.608114,5.291668 -5.291664,5.291667 l -8.9958327,-3e-6 C 1.2786733,16.93333 0,15.70582 0,14.2875 V 5.2916666 C 0,2.6081066 2.6081066,0 5.2916666,0 Z"/><path fill="#8cf287" d="m 4.2333333,2.660819 c 0.7328958,0 1.3229166,-0.1667343 1.3229166,0.612115 v 9.442052 c 0,0.778849 -0.5900208,1.5875 -1.3229166,1.5875 -0.7328958,0 -1.3229166,0.166734 -1.3229166,-0.612115 V 4.2483189 c 0,-0.7788491 0.5900208,-1.5874999 1.3229166,-1.5874999 z"/><path fill="#8cf287" d="m 12.170833,2.660819 c 0.732896,0 1.322916,-0.1667342 1.322916,0.612115 v 9.442052 c 0,0.778849 -0.59002,1.5875 -1.322916,1.5875 -0.732896,0 -1.322917,0.166734 -1.322917,-0.612115 V 4.2483189 c 0,-0.7788492 0.590021,-1.5874999 1.322917,-1.5874999 z"/><path fill="#8cf287" d="M 5.2916667,7.6879025 11.1125,6.8941523 V 9.5399855 L 5.2916666,10.333736 Z"/></g></symbol>
       <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3L2.85 9.45l6.32-.92z" /></symbol>
       <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 20h16" /></symbol>
       <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" /></symbol>
@@ -360,12 +378,13 @@
             <a class="btn btn-star" href="https://github.com/Manish-404/autocorrect-global"><svg class="i i-fill star" aria-hidden="true"><use href="#i-star" /></svg>Star on GitHub</a>
             <a class="btn btn-primary" href="https://github.com/Manish-404/autocorrect-global/archive/refs/heads/main.zip"><svg class="i" aria-hidden="true"><use href="#i-download" /></svg>Download ZIP</a>
           </div>
-          <p class="watch"><a href="#video"><svg class="i i-fill" aria-hidden="true"><use href="#i-play" /></svg>Watch the 24-second video</a></p>
+          <p class="watch"><a href="#video"><svg class="i i-fill" aria-hidden="true"><use href="#i-play" /></svg>Watch the 27-second video</a></p>
           <ul class="facts">
             <li><svg class="i" aria-hidden="true"><use href="#i-check" /></svg>39,000+ ready-made fixes</li>
             <li><svg class="i" aria-hidden="true"><use href="#i-check" /></svg>Word, Excel, PowerPoint, Chrome, Firefox</li>
             <li><svg class="i" aria-hidden="true"><use href="#i-check" /></svg>Plain-text scripts you can read</li>
           </ul>
+          <p class="built"><a href="https://www.autohotkey.com/"><img src="assets/autohotkey-logo.svg" alt="AutoHotkey logo" width="118" height="40"></a><span>Built on <a href="https://www.autohotkey.com/">AutoHotkey</a>, free and open-source software.</span></p>
         </div>
 
         <div class="demo" aria-label="Live demo: a typo being typed and fixed">
@@ -380,11 +399,30 @@
       </div>
     </section>
 
+    <!-- works in all of them -->
+    <section class="works" id="works" aria-labelledby="works-title">
+      <div class="wrap">
+        <div class="section-head center" style="margin-bottom:0">
+          <p class="kicker">Where it works</p>
+          <h2 id="works-title">Works in all of them.</h2>
+        </div>
+        <ul class="works-row">
+          <li><img src="assets/works-in/word.png" alt="" width="88" height="88"><span>Word</span></li>
+          <li><img src="assets/works-in/excel.png" alt="" width="88" height="88"><span>Excel</span></li>
+          <li><img src="assets/works-in/powerpoint.png" alt="" width="88" height="88"><span>PowerPoint</span></li>
+          <li><img src="assets/works-in/outlook.png" alt="" width="88" height="88"><span>Outlook</span></li>
+          <li><img src="assets/works-in/whatsapp.png" alt="" width="88" height="88"><span>WhatsApp</span></li>
+        </ul>
+        <p class="works-more">…and anywhere else you can type.</p>
+        <p class="fine works-note">Word, Excel and PowerPoint were tested with real files (<a href="#tested">see the results</a>). Outlook and WhatsApp use ordinary text boxes and are not in the automated test yet, because testing them needs a signed-in account.</p>
+      </div>
+    </section>
+
     <!-- video -->
     <section class="section band" id="video" aria-labelledby="video-title">
       <div class="wrap">
         <div class="section-head center">
-          <p class="kicker">24 seconds</p>
+          <p class="kicker">27 seconds</p>
           <h2 id="video-title">See where it works.</h2>
           <p class="sub">Chats, email, Word, Excel, PowerPoint, comments and search bars.</p>
         </div>
@@ -395,7 +433,7 @@
               Your browser can't play this video. <a href="media/autocorrect-global.mp4">Download it</a>.
             </video>
           </div>
-          <p class="video-note">The windows in the video are animated, but every sentence is a real entry from the lists, and the Word, Excel and PowerPoint lines were also typed into the real programs (see the table below). Video made with <a href="https://github.com/latent-spaces/brag">brag</a>.</p>
+          <p class="video-note">The windows in the video are animated, but every sentence is a real entry from the lists, and the Word, Excel and PowerPoint lines were also typed into the real programs (see the table below).</p>
         </div>
       </div>
     </section>
@@ -456,7 +494,7 @@
           <div class="limits">
             <h4>Honest limits</h4>
             <ul>
-              <li><b>Not tested:</b> Notepad, Outlook, desktop chat apps, code editors, games. They are ordinary Windows text boxes, so they should work, but we have not checked each one. <code>tools/compat</code> lets you test yours.</li>
+              <li><b>Not tested yet:</b> Outlook and WhatsApp (testing them needs a signed-in account), Notepad, other desktop chat apps, code editors, games. They are ordinary Windows text boxes, so they should work, but we have not checked each one. <code>tools/compat</code> lets you test yours.</li>
               <li>A program running <b>as administrator</b> ignores a normal script. Run the script as administrator too (right-click, Run as administrator).</li>
               <li>Games with anti-cheat, remote desktop windows and some secure input fields can block scripts that type for you.</li>
               <li><b>Hindi</b> needs a keyboard that types Devanagari letter by letter, such as Windows' Hindi Traditional (INSCRIPT). Phonetic tools that compose whole words first were not tested.</li>
@@ -472,7 +510,7 @@
         <div class="section-head">
           <p class="kicker">How it works</p>
           <h2 id="how-title">One rule per typo. Thousands of rules.</h2>
-          <p class="sub">Each script is a plain text file for AutoHotkey, a free Windows tool that can watch the keyboard. A rule is a single line, called a hotstring.</p>
+          <p class="sub">Each script is a plain text file for AutoHotkey, a free, open-source Windows tool that can watch the keyboard. A rule is a single line, called a hotstring.</p>
         </div>
         <div class="steps">
           <article class="step"><span class="n">1</span><h3>You type</h3><p>The script sits in the tray and sees each key you press, in any program.</p>
@@ -502,6 +540,13 @@
               <div class="stat"><b>315 / 315</b><span>live typing test</span></div>
             </div>
             <p style="margin-top:16px">On words the generator never saw, 3 in about 200 rare words were changed, all alternate spellings. That's why every fix is one line you can delete.</p>
+          </div>
+        </div>
+        <div class="panel ahk" id="built-on">
+          <a href="https://www.autohotkey.com/"><img src="assets/autohotkey-logo.svg" alt="AutoHotkey logo" width="190" height="64"></a>
+          <div>
+            <h3>Made on open-source software</h3>
+            <p>AutoCorrect Global is built on <a href="https://www.autohotkey.com/">AutoHotkey</a>, the free, open-source (GNU GPL v2) scripting language for Windows, created by Chris Mallett and others. AutoHotkey does the watching and the typing; the scripts here are the rules it follows. Its source code is on <a href="https://github.com/AutoHotkey/AutoHotkey">GitHub</a>.</p>
           </div>
         </div>
       </div>
@@ -539,7 +584,7 @@
         </div>
         <div class="install">
           <ol>
-            <li><h3>Get AutoHotkey v1.1</h3><p>Download it free from <a href="https://www.autohotkey.com/">autohotkey.com</a> and choose <b>v1.1</b>. The scripts are written for v1.1, not v2.</p></li>
+            <li><h3>Get AutoHotkey v1.1</h3><p>It is free and open source. Download it from <a href="https://www.autohotkey.com/">autohotkey.com</a> and choose <b>v1.1</b>. The scripts are written for v1.1, not v2.</p></li>
             <li><h3>Download the scripts</h3><p><a href="https://github.com/Manish-404/autocorrect-global/archive/refs/heads/main.zip">Download the ZIP</a> and unzip it anywhere.</p></li>
             <li><h3>Double-click what you want</h3><p>Run one, two or all three. A green <b>H</b> appears in the tray. Each script only touches its own language.</p></li>
             <li><h3>Start with Windows (optional)</h3><p>Press <b>Win + R</b>, type <code>shell:startup</code>, and drop a shortcut to each script in that folder.</p></li>
@@ -561,6 +606,7 @@
         <div class="section-head center"><p class="kicker">Questions</p><h2 id="faq-title">Good to know.</h2></div>
         <div class="faq">
           <details><summary>Does it send what I type anywhere?</summary><p>No. The scripts contain no network code and keep nothing. They only compare the word you just typed with their list, on your own PC. They are short, plain text files, so you can check.</p></details>
+          <details><summary>What is AutoHotkey, and is it safe?</summary><p>AutoHotkey is a free, open-source (GNU GPL v2) tool for Windows that can watch the keyboard and type for you. AutoCorrect Global is a set of short, readable AutoHotkey scripts, built on it. It is an independent project, not made by or affiliated with the AutoHotkey project. Get AutoHotkey only from <a href="https://www.autohotkey.com/">autohotkey.com</a>.</p></details>
           <details><summary>What if it changes a word I meant?</summary><p>Open the script in any text editor and delete that one line (use search to find it), then reload the script. Names and rare words are the usual cause. In our test on words the Hinglish generator had never seen, 3 of about 200 rare words were changed, all of them alternate spellings.</p></details>
           <details><summary>Why one script per language?</summary><p>So each stays small, and so you only run what you need. They are built so they never both rewrite the same word: the Hinglish list drops anything the English script would also change.</p></details>
           <details><summary>Does it work on Mac, Linux or my phone?</summary><p>No. It needs Windows and AutoHotkey v1.1. The idea would port, but this project does not.</p></details>
@@ -597,8 +643,9 @@
           <a href="https://github.com/Manish-404/autocorrect-global/archive/refs/heads/main.zip">Download</a>
         </nav>
       </div>
-      <p class="legal">Hindi and Hinglish scripts, the generator and this page are MIT licensed. <code>AutoCorrect.ahk</code> is the long-standing AutoHotkey AutoCorrect script (Jim Biancolo, 2006), built on Wikipedia's lists of common misspellings (CC BY-SA 3.0) and other sources named in its header, included as it was. AutoHotkey is a separate free project. Microsoft, Word, Excel, PowerPoint, Chrome and Firefox are trademarks of their owners and are named only to say where this was tested.</p>
-      <p class="legal">No cookies, analytics or third-party requests on this page. Promo video made with <a href="https://github.com/latent-spaces/brag">brag</a>.</p>
+      <p class="legal">Hindi and Hinglish scripts, the generator and this page are MIT licensed, except for the logos shown on it. <code>AutoCorrect.ahk</code> is the long-standing AutoHotkey AutoCorrect script (Jim Biancolo, 2006), built on Wikipedia's lists of common misspellings (CC BY-SA 3.0) and other sources named in its header, included as it was.</p>
+      <p class="legal">Built on <a href="https://www.autohotkey.com/">AutoHotkey</a>, free and open-source software (GNU GPL v2) created by Chris Mallett and others. The AutoHotkey logo and icon on this page belong to the AutoHotkey project and are used as published, to say what this is built on. AutoCorrect Global is an independent project and is not affiliated with or endorsed by AutoHotkey, Microsoft, WhatsApp, Google or Mozilla. The Word, Excel, PowerPoint, Outlook and WhatsApp logos belong to their owners and are shown only to say where this works. Microsoft, Excel, Outlook, PowerPoint and Word are trademarks of the Microsoft group of companies. WhatsApp, Chrome and Firefox are trademarks of their owners.</p>
+      <p class="legal">No cookies, analytics or third-party requests on this page.</p>
     </div>
   </footer>
 

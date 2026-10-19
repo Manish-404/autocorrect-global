@@ -6,15 +6,18 @@
 
 **Typos fix themselves.** System-wide autocorrect for Windows in **English**, **हिंदी** (Devanagari) and **Hinglish** (Hindi in English letters).
 
+<a href="https://www.autohotkey.com/"><img src="docs/assets/autohotkey-logo.svg" height="40" alt="AutoHotkey logo"></a><br>
+<sub>Built on <a href="https://www.autohotkey.com/"><b>AutoHotkey</b></a>, free and open-source software.</sub>
+
 [![License: MIT](https://img.shields.io/badge/license-MIT-f2600c)](LICENSE)
-[![AutoHotkey v1.1](https://img.shields.io/badge/AutoHotkey-v1.1-14b88a)](https://www.autohotkey.com/)
+[![Built on AutoHotkey v1.1](https://img.shields.io/badge/built%20on-AutoHotkey%20v1.1-14b88a)](https://www.autohotkey.com/)
 [![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078d4)](#get-started)
 [![GitHub stars](https://img.shields.io/github/stars/Manish-404/autocorrect-global?style=social)](https://github.com/Manish-404/autocorrect-global/stargazers)
 
 ### ⭐ If it saves you from one embarrassing typo, [star the repo](https://github.com/Manish-404/autocorrect-global)
 It's free, and a star helps other English, Hindi and Hinglish typists find it.
 
-[**Website**](https://manish-404.github.io/autocorrect-global/) · [**Download ZIP**](https://github.com/Manish-404/autocorrect-global/archive/refs/heads/main.zip) · [**Watch the 24-second video**](https://manish-404.github.io/autocorrect-global/#video)
+[**Website**](https://manish-404.github.io/autocorrect-global/) · [**Download ZIP**](https://github.com/Manish-404/autocorrect-global/archive/refs/heads/main.zip) · [**Watch the 27-second video**](https://manish-404.github.io/autocorrect-global/#video)
 
 [![Chats, email, Word, Excel and PowerPoint: typos fixed as you type](docs/media/autocorrect-global-demo.gif)](https://manish-404.github.io/autocorrect-global/#video)
 
@@ -33,6 +36,18 @@ A tiny background script watches what you type. When you finish a word with Spac
 Your capitals are kept (`Nhi` → `Nahi`, `NHI` → `NAHI`).
 
 ## Where you can use it
+
+<table>
+  <tr align="center">
+    <td><img src="docs/assets/works-in/word.png" width="64" alt=""><br><b>Word</b></td>
+    <td><img src="docs/assets/works-in/excel.png" width="64" alt=""><br><b>Excel</b></td>
+    <td><img src="docs/assets/works-in/powerpoint.png" width="64" alt=""><br><b>PowerPoint</b></td>
+    <td><img src="docs/assets/works-in/outlook.png" width="64" alt=""><br><b>Outlook</b></td>
+    <td><img src="docs/assets/works-in/whatsapp.png" width="64" alt=""><br><b>WhatsApp</b></td>
+  </tr>
+</table>
+
+**Works in all of them, and anywhere else you can type.** Word, Excel and PowerPoint are tested with real files (table below). Outlook and WhatsApp use ordinary text boxes and are not in the automated test yet, because testing them needs a signed-in account.
 
 Anywhere you type in Windows: chats, email, documents, spreadsheets, slides, comments, captions, search and address bars. These are the everyday places we tried, with the exact line typed in each:
 
@@ -64,7 +79,7 @@ Not a guess: [`tools/compat`](tools/compat) opens each program, types a real sen
 Tested on Windows 11 23H2 with AutoHotkey 1.1.37.02, Chrome 155, Firefox 158 and Microsoft 365 Apps 16.0. Runs that were interrupted by other windows taking focus were repeated. The Hindi sentences were sent to the programs as Unicode keystrokes by the test script (the test PC has no Hindi keyboard installed), not typed on a physical Hindi keyboard.
 ¹ Word, Excel and PowerPoint ship their own AutoCorrect list that overlaps the English fixes, so an English pass there would not prove which tool did the work.
 
-**Not tested:** Notepad, Outlook, desktop chat apps, code editors, games. They are ordinary Windows text boxes, so they should work, but we have not checked each one. Run `tools\compat\run_compat.ps1` to test yours.
+**Not tested yet:** Outlook and WhatsApp (testing them needs a signed-in account), Notepad, other desktop chat apps, code editors, games. They are ordinary Windows text boxes, so they should work, but we have not checked each one. Run `tools\compat\run_compat.ps1` to test yours.
 
 ## Get started
 
@@ -88,7 +103,7 @@ Each file keeps a block of **optional** fixes, commented out, for spellings wher
 
 ## How it works
 
-Each script is a plain text file for [AutoHotkey](https://www.autohotkey.com/), a free tool that can watch the keyboard. One rule is one line, called a *hotstring*:
+Each script is a plain text file for [AutoHotkey](https://www.autohotkey.com/), a free, open-source tool that can watch the keyboard. One rule is one line, called a *hotstring*:
 
 ```ahk
 ::nhi::nahi
@@ -173,7 +188,8 @@ Found a wrong fix, or a word that should be there? [Open an issue](https://githu
 
 * The Hindi and Hinglish scripts, the generator, the tests and the website are [MIT licensed](LICENSE).
 * [`AutoCorrect.ahk`](AutoCorrect.ahk) is the long-standing AutoHotkey AutoCorrect script (Jim Biancolo, 2006), built on Wikipedia's [lists of common misspellings](https://en.wikipedia.org/wiki/Wikipedia:Lists_of_common_misspellings) (CC BY-SA 3.0) and the other sources named in its header. It is included as it was and keeps its own terms (see [NOTICE.md](NOTICE.md)).
-* [AutoHotkey](https://www.autohotkey.com/) is a separate free project. Microsoft, Word, Excel, PowerPoint, Chrome and Firefox are trademarks of their owners and are named only to say where this was tested.
+* **Built on [AutoHotkey](https://www.autohotkey.com/)**, free and open-source software (GNU GPL v2) created by Chris Mallett and others. The AutoHotkey logo and icon shown here belong to the AutoHotkey project and are used as published, to say what this is built on (details in [NOTICE.md](NOTICE.md)). This project is independent and not affiliated with or endorsed by AutoHotkey.
+* Microsoft, Excel, Outlook, PowerPoint and Word are trademarks of the Microsoft group of companies. WhatsApp, Chrome and Firefox are trademarks of their owners. Their logos in the "Where you can use it" row belong to their owners and are shown only to say where this works; they are not covered by the MIT licence, and this project is not affiliated with or endorsed by them.
 * The promo video was made with [brag](https://github.com/latent-spaces/brag).
 
 ---
