@@ -47,7 +47,7 @@ Your capitals are kept (`Nhi` → `Nahi`, `NHI` → `NAHI`).
   </tr>
 </table>
 
-**Works in all of them, and anywhere else you can type.** Word, Excel and PowerPoint are tested with real files (table below). Outlook and WhatsApp use ordinary text boxes and are not in the automated test yet, because testing them needs a signed-in account.
+**Works in all of them, and anywhere else you can type.** Word, Excel and PowerPoint are tested with real files (table below).
 
 Anywhere you type in Windows: chats, email, documents, spreadsheets, slides, comments, captions, search and address bars. These are the everyday places we tried, with the exact line typed in each:
 
